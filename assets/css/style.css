@@ -1850,3 +1850,34 @@ dialog::backdrop {
     height:510px
   }
 }
+/* The activity report adds a cooperation milestone and a compact archive. */
+.cooperation-highlight {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 55px;
+  align-items: center;
+  background: var(--green);
+  color: var(--marble);
+  border-radius: 20px;
+  padding: 38px 42px;
+  margin-top: 42px;
+}
+.cooperation-highlight .eyebrow { color: var(--gold); margin-bottom: 15px; font-size: 9px; }
+.cooperation-highlight h3 { font-size: 31px; letter-spacing: -.035em; }
+.cooperation-highlight > div > p:not(.eyebrow) { color: #e1eadf; font-size: 13px; }
+.cooperation-highlight .text-link { margin-top: 16px; font-size: 11px; }
+.archive-toggle { display: block; width: 100%; padding: 18px 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); font-size: 12px; font-weight: 600; margin-top: 24px; min-height: 56px; }
+.archive-toggle:hover { background: #f4e6d3; }
+.archive-note a { text-decoration: underline; text-underline-offset: 3px; }
+.dialog-sources { display: flex; flex-wrap: wrap; gap: 14px 25px; }
+.document-main details { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 20px; }
+.document-main summary { cursor: pointer; font-size: 13px; color: var(--green); }
+.report-excerpts { margin-top: 25px; padding-left: 23px; }
+.report-excerpts li { padding-left: 5px; }
+.report-excerpts strong { color: var(--ink); }
+@media(max-width:600px) {
+  .cooperation-highlight { grid-template-columns: 1fr; gap: 20px; padding: 29px 26px; margin-top: 32px; }
+  .cooperation-highlight h3 { font-size: 27px; }
+  .cooperation-highlight > div > p:not(.eyebrow) { font-size: 12px; }
+  .cooperation-highlight .text-link { min-height: 44px; }
+}

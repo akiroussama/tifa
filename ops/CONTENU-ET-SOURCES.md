@@ -79,3 +79,22 @@ La mise en ligne peut être faite par Oussama dans Vercel après l’import du d
 - LinkedIn : https://www.linkedin.com/company/tunisian-indian-friendship-association/posts/?feedView=all. La lecture directe renvoie vers une page de connexion/inscription. Un résultat indexé de TIFA sur les échanges économiques est repéré, mais sa date reste relative et son texte s’appuie sur une source tierce ; aucune nouvelle action TIFA n’est déduite de ce résultat.
 - Instagram : https://www.instagram.com/tifa.tunisiaindia/. Le profil public et douze vignettes sont visibles ; l’ouverture d’une publication impose la connexion. Les légendes complètes et les carrousels ne sont pas accessibles. Aucun événement supplémentaire n’est créé à partir d’une vignette seule.
 - Les deux profils sont liés dans la section Contact. Le paramètre de suivi du lien Instagram a été retiré ; le compte reste le même. La collecte multi-réseaux demeure partielle.
+
+## Rapport d’activités TIFA 2024–2026 ajouté le 2 octobre 2026
+
+Source remise : C:\Users\akiroussama\Downloads\TIFA_Activity_Report.docx. SHA256 : 74eb2612c6a229b2881b5314edee3c006c588d0f1feb93ff114f258c6ceaba6e. Le document contient quatorze entrées d’activités, aucun tableau, aucun lien externe, aucun suivi de modifications et un seul média : un logo de 208 × 213 pixels. Aucune nouvelle photo d’événement n’est disponible dans cette pièce.
+
+Lecture complète de l’OOXML : titre, introduction et paragraphes 15–42 des activités. Les passages d’activités en anglais sont restitués sur constitution.html#rapport-activites pour rendre les adaptations vérifiables. Le DOCX original et l’extraction intégrale restent hors du dépôt et de l’artefact Vercel. Le rendu Word n’a pas été réalisé : LibreOffice n’est pas fourni dans le runtime Windows disponible ; la lecture du contenu structuré a été vérifiée et le site résultant est contrôlé dans le navigateur.
+
+Douze nouvelles fiches : départ de l’ambassadeur Gangte (fin 2024), Republic Day (janvier 2025), Indian Tea Day (mars 2025), yoga au Musée de Carthage (juin 2025), troupe du Rajasthan (août 2025), ITEC Day (septembre 2025), protocole avec la Chambre de commerce Inde–Tunisie, visite à FIPA-Tunisia et soirée CIFE (novembre 2025), journée culturelle avec Rahi Travels Tunisia à Dar El Lamma Ras Jebel (avril 2026), assemblée générale 2024–2025 et yoga à l’amphithéâtre de Carthage (juin 2026).
+
+Les fiches conservent les mois, sans inventer de jour. « Fin 2024 » reste un libellé de période sans mois ni attribut datetime quotidien. Chaque fiche du rapport conserve les deux paragraphes source et leur numéro dans content.js. Le protocole porte sur le commerce, la culture et la jeunesse ; aucun résultat économique chiffré ni investissement réalisé n’est déduit des rencontres. L’assemblée générale ne donne pas de bureau actualisé ni d’élection détaillée. Les rôles de participation et d’organisation restent séparés ; le rôle de TIFA dans l’organisation du yoga 2025 n’est pas établi.
+
+Deux événements déjà présents sont identifiés dans le rapport :
+
+- Diwali, novembre 2025 : la fiche existante est enrichie avec la coorganisation mentionnée dans le rapport et son programme ; l’ambassade demeure la source principale, le rapport est lié comme source supplémentaire.
+- Dîner en l’honneur de l’ambassadrice : le rapport indique juin 2025 et Dar Essalem, Sidi Bou Saïd. La page https://www.embassyofindiatunis.gov.in/glr-22-05-2025.php, relue le 2 octobre 2026, indique explicitement le vendredi 16 mai 2025. La fiche existante conserve cette date. L’identité entre les deux mentions n’étant pas établie, le lieu n’est pas fusionné dans la fiche de mai et aucun second événement de juin n’est créé. Divergence à clarifier avec l’association.
+
+Le rapport utilise Sultana et Soltana pour Shabinaa selon les entrées ; la fiche CIFE évite cette variation en ne reprenant pas le nom. Les qualités citées sont historiques et attribuées au rapport, sans affirmation sur les fonctions actuelles.
+
+L’accueil met en avant le protocole de coopération et enrichit l’histoire. Les rencontres sont rangées par dates décroissantes ; les quatre dernières s’affichent initialement, un bouton ouvre les seize fiches et le filtre Vie associative donne accès à l’assemblée générale. Les neuf photographies réelles, le logo officiel, les cinq fondateurs et le Taj Mahal sont conservés.

@@ -34,7 +34,7 @@ La dépendance Three.js 0.186.1 et sa licence MIT sont conservées localement da
 
 ## Mettre à jour les contenus
 
-- `assets/js/content.js` : rencontres, liens sources, textes originaux, dates et fondateurs.
+- `assets/js/content.js` : rencontres, liens sources, textes originaux, précision des dates et fondateurs.
 - `assets/images/` : logo et images copiées des publications réelles.
 - `ops/media-provenance.json` : origine et dimensions des médias.
 - `ops/CONTENU-ET-SOURCES.md` : faits, limites, pièces attendues et méthode de collecte.
@@ -44,7 +44,11 @@ Pour ajouter une rencontre, suivre la structure d’une fiche dans `content.js`.
 
 ## État du contenu
 
-Première version : quatre fiches sourcées, dont deux publications Facebook TIFA avec neuf photographies ; deux comptes rendus de l’ambassade en texte ; cinq fondateurs publiés au JORT. La composition actuelle du bureau, les autres membres, les statuts complets et l’exhaustivité des archives Facebook restent à établir.
+Version enrichie : seize fiches documentées, dont douze issues du rapport d’activités TIFA 2024–2026 ; deux publications Facebook avec neuf photographies ; deux comptes rendus de l’ambassade, dont la fiche Diwali complétée par le rapport ; cinq fondateurs publiés au JORT. Les quatre rencontres les plus récentes apparaissent d’abord ; le bouton d’archives donne accès aux seize fiches et les filtres affichent toutes les rencontres de leur catégorie.
+
+Le rapport apporte notamment un protocole d’entente sur le commerce, la culture et la jeunesse, une visite à FIPA-Tunisia, des rencontres autour du leadership féminin, du yoga et de la culture, et l’assemblée générale de juin 2026. Les dates mensuelles restent mensuelles. Une divergence sur le dîner (juin dans le rapport, 16 mai 2025 selon l’ambassade) est exposée sur la page des sources ; aucun deuxième dîner n’est créé sans clarification. Le document original reste local, et seuls les passages d’activités sont restitués sur `constitution.html#rapport-activites`.
+
+La composition actuelle du bureau, les autres membres, les statuts complets et l’exhaustivité des archives Facebook restent à établir.
 
 Le nom `Constitution d’une Association` du document reçu désigne une annonce au JORT ; ce n’est pas un exemplaire des statuts complets. Les fichiers PDF reçus restent locaux, car les pages comportent aussi des annonces sans rapport avec TIFA.
 
