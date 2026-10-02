@@ -27,19 +27,20 @@ function initTaj() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, coarse.matches ? 1.25 : 1.6));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.12;
+  renderer.toneMappingExposure = 1.05;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.setClearColor(0x000000, 0);
 
   const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0xf7d4b3, 55, 105);
+  scene.fog = new THREE.Fog(0xf1a46e, 58, 112);
   const camera = new THREE.PerspectiveCamera(37, 1, 0.1, 140);
   const target = new THREE.Vector3(0, 3.1, 2);
   const panoramicTarget = new THREE.Vector3(0, 4, -1.8);
-  scene.add(new THREE.HemisphereLight(0xfff5df, 0x7b7863, 2.2));
-  const sun = new THREE.DirectionalLight(0xffe0b8, 3.2);
-  sun.position.set(-16, 24, 12);
+  // Dusk: a low saffron sun on the left, a violet sky fill on the right.
+  scene.add(new THREE.HemisphereLight(0xffc9a8, 0x3b2350, 1.75));
+  const sun = new THREE.DirectionalLight(0xffa463, 3.6);
+  sun.position.set(-22, 13, 14);
   sun.castShadow = true;
   sun.shadow.mapSize.set(coarse.matches ? 1024 : 2048, coarse.matches ? 1024 : 2048);
   sun.shadow.camera.left = -24;
@@ -51,7 +52,7 @@ function initTaj() {
   sun.shadow.normalBias = 0.045;
   sun.shadow.bias = -0.00015;
   scene.add(sun);
-  const fill = new THREE.DirectionalLight(0xe1e8ee, 0.65);
+  const fill = new THREE.DirectionalLight(0x9d8ae0, 0.9);
   fill.position.set(14, 12, -15);
   scene.add(fill);
 
@@ -59,15 +60,15 @@ function initTaj() {
   const material = {
     marble: new THREE.MeshStandardMaterial({ color: 0xfff9ec, map: marbleTexture, roughness: 0.7 }),
     edge: new THREE.MeshStandardMaterial({ color: 0xf1e5cf, roughness: 0.8 }),
-    inset: new THREE.MeshStandardMaterial({ color: 0x5e5950, roughness: 1 }),
+    inset: new THREE.MeshStandardMaterial({ color: 0x4a3328, emissive: 0xff8a2a, emissiveIntensity: 0.32, roughness: 1 }),
     detail: new THREE.MeshStandardMaterial({ color: 0x7f7060, roughness: 0.85 }),
     sandstone: new THREE.MeshStandardMaterial({ color: 0xba7555, roughness: 1 }),
     sandstoneEdge: new THREE.MeshStandardMaterial({ color: 0xd69b77, roughness: 0.9 }),
-    lawn: new THREE.MeshStandardMaterial({ color: 0x536e4b, roughness: 1 }),
+    lawn: new THREE.MeshStandardMaterial({ color: 0x5f8a50, roughness: 1 }),
     cypress: new THREE.MeshStandardMaterial({ color: 0x2d513e, roughness: 1 }),
     path: new THREE.MeshStandardMaterial({ color: 0xdcc7a7, roughness: 0.95 }),
     gold: new THREE.MeshStandardMaterial({ color: 0xba9250, metalness: 0.65, roughness: 0.3 }),
-    water: new THREE.MeshStandardMaterial({ color: 0x15585c, roughness: 0.2, metalness: 0.18, transparent: true, opacity: 0.7, depthWrite: false }),
+    water: new THREE.MeshStandardMaterial({ color: 0x2c2a6e, roughness: 0.2, metalness: 0.18, transparent: true, opacity: 0.7, depthWrite: false }),
   };
 
   const unitBox = new THREE.BoxGeometry(1, 1, 1);
@@ -315,6 +316,30 @@ function initTaj() {
     ring.receiveShadow=false;
     ring.renderOrder=5;
   }
+  // Oil lamps (diyas) line the pool and the plinth steps; they flicker softly.
+  const glow = makeGlow();
+  const lampMaterials = [0, 1].map(() => new THREE.PointsMaterial({ map: glow, color: 0xffc46e, size: 1.6, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, sizeAttenuation: true }));
+  const lampSets = [[], []];
+  for (let j = 0; j < 22; j++) {
+    const z = 2.4 + j * 1.05;
+    lampSets[j % 2].push(-2.42, 0.2, z, 2.42, 0.2, z);
+  }
+  lampSets.forEach((points, i) => {
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
+    const lamps = new THREE.Points(geometry, lampMaterials[i]);
+    lamps.renderOrder = 6;
+    garden.add(lamps);
+  });
+  const terraceLamps = [];
+  for (let i = 0; i < 9; i++) terraceLamps.push(-9.6 + i * 2.4, 1.0, -0.2, -9.6 + i * 2.4, 1.0, -14.8);
+  [-11.6, 11.6].forEach(x => { for (let i = 0; i < 6; i++) terraceLamps.push(x, 0.3, -14 + i * 2.8); });
+  const terraceGeometry = new THREE.BufferGeometry();
+  terraceGeometry.setAttribute('position', new THREE.Float32BufferAttribute(terraceLamps, 3));
+  const terrace = new THREE.Points(terraceGeometry, lampMaterials[1]);
+  terrace.renderOrder = 6;
+  scene.add(terrace);
+
   // A compact architectural diorama retains the pool's full perspective axis
   // in short panoramic heroes and mobile frames without shrinking the monument.
   garden.scale.z=0.7;
@@ -332,7 +357,7 @@ function initTaj() {
     const source = item.material;
     if (!reflectedMaterials.has(source)) {
       const reflectMaterial = source.clone();
-      reflectMaterial.color.multiply(new THREE.Color(0x93b4a8));
+      reflectMaterial.color.multiply(new THREE.Color(0xb59ac8));
       reflectMaterial.side = THREE.DoubleSide;
       reflectedMaterials.set(source, reflectMaterial);
     }
@@ -354,6 +379,8 @@ function initTaj() {
   let height = 1;
   let contextLost = false;
   let framesDrawn = 0;
+  // Opening flight: the camera glides in from high above the gardens.
+  let intro = reduced.matches ? 1 : 0;
   const fpsInterval = coarse.matches ? 1000 / 24 : 1000 / 30;
 
   function updateCamera() {
@@ -361,8 +388,11 @@ function initTaj() {
     const horizontalFit = Math.max(1, 0.94 / aspect);
     const panoramic = aspect > 1.8;
     const radius = (panoramic ? 31 : 36.5) * horizontalFit;
-    const angle = 0.095 + (paused ? 0 : Math.sin(elapsed * 0.14) * 0.065) + smoothX * 0.15;
-    camera.position.set(Math.sin(angle) * radius, (panoramic ? 17.8 : 20.5) * horizontalFit + smoothY * 1.1, Math.cos(angle) * radius + (panoramic ? 1 : 4));
+    const ease = 1 - Math.pow(1 - intro, 3);
+    const away = 1 - ease;
+    const angle = 0.095 + (paused ? 0 : Math.sin(elapsed * 0.14) * 0.065) + smoothX * 0.15 - away * 0.85;
+    const reach = radius * (1 + away * 0.75);
+    camera.position.set(Math.sin(angle) * reach, (panoramic ? 17.8 : 20.5) * horizontalFit + smoothY * 1.1 + away * 26, Math.cos(angle) * reach + (panoramic ? 1 : 4));
     camera.lookAt(panoramic ? panoramicTarget : target);
   }
   function renderFrame() {
@@ -379,7 +409,12 @@ function initTaj() {
       frame = requestAnimationFrame(draw);
       return;
     }
-    if (!paused) elapsed += Math.min((now - lastFrame) / 1000, 0.06);
+    if (!paused) {
+      const step = Math.min((now - lastFrame) / 1000, 0.06);
+      elapsed += step;
+      if (intro < 1) intro = Math.min(1, intro + step / 4.2);
+      lampMaterials.forEach((lamp, i) => { lamp.opacity = 0.78 + Math.sin(elapsed * (6.3 + i * 1.7) + i * 2) * 0.12 + Math.sin(elapsed * 13.1 + i) * 0.08; });
+    }
     lastFrame = now;
     smoothX += (pointerX - smoothX) * 0.035;
     smoothY += (pointerY - smoothY) * 0.035;
@@ -411,6 +446,7 @@ function initTaj() {
   motionButton?.addEventListener('click',() => {
     if(reduced.matches) return;
     userPaused = !userPaused;
+    intro = 1;
     paused = userPaused;
     pointerX=pointerY=smoothX=smoothY=0;
     syncButton();
@@ -418,6 +454,7 @@ function initTaj() {
   });
   reduced.addEventListener('change',event => {
     paused=event.matches || userPaused;
+    if (event.matches) intro = 1;
     pointerX=pointerY=smoothX=smoothY=0;
     syncButton(); requestDraw();
   });
@@ -516,6 +553,22 @@ function batchArchitecture(root) {
     item.castShadow=item.receiveShadow=true;
     root.add(item);
   });
+}
+
+function makeGlow() {
+  const surface=document.createElement('canvas');
+  surface.width=surface.height=64;
+  const ctx=surface.getContext('2d');
+  const g=ctx.createRadialGradient(32,32,0,32,32,32);
+  g.addColorStop(0,'rgba(255,248,220,1)');
+  g.addColorStop(0.18,'rgba(255,200,110,.9)');
+  g.addColorStop(0.45,'rgba(255,140,50,.28)');
+  g.addColorStop(1,'rgba(255,120,40,0)');
+  ctx.fillStyle=g;
+  ctx.fillRect(0,0,64,64);
+  const texture=new THREE.CanvasTexture(surface);
+  texture.colorSpace=THREE.SRGBColorSpace;
+  return texture;
 }
 
 function makeMarble() {

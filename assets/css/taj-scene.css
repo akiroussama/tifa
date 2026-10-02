@@ -1,24 +1,12 @@
-/* Architectural sunrise: the 3D canvas and its no-WebGL illustration share a frame. */
+/* The 3D canvas and its no-WebGL illustration share a frame inside the dusk hero. */
 .taj-scene {
   position: relative;
   width: 100%;
-  height: 640px;
+  height: 100%;
   min-width: 0;
   overflow: hidden;
   isolation: isolate;
   background: transparent;
-}
-.taj-scene::before {
-  content: "";
-  position: absolute;
-  width: 145px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  top: 8%;
-  left: 24%;
-  background: rgba(255, 249, 228, .25);
-  box-shadow: 0 0 85px 25px rgba(255, 236, 201, .18);
-  z-index: -1;
 }
 #taj-canvas,
 .taj-fallback {
@@ -28,22 +16,13 @@
   width: 100%;
   height: 100%;
 }
-#taj-canvas { opacity: 0; transition: opacity .65s ease; }
-.taj-fallback { object-fit: contain; opacity: 1; transition: opacity .65s ease; }
+#taj-canvas { opacity: 0; transition: opacity 1.2s ease; }
+.taj-fallback { object-fit: contain; object-position: center bottom; opacity: 1; transition: opacity .8s ease; }
 .taj-ready #taj-canvas { opacity: 1; }
 .taj-ready .taj-fallback { opacity: 0; pointer-events: none; }
 .taj-static .taj-fallback { opacity: 1; }
-.taj-scene::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 78%, rgba(247, 224, 196, .32) 100%);
-}
 @media (max-width: 700px) {
-  .taj-scene { height: 390px; }
-  .taj-scene::before { width: 100px; top: 6%; left: 15%; }
-  .taj-fallback { object-fit: contain; }
+  .taj-scene { height: 400px; }
 }
 @media (prefers-reduced-motion: reduce) {
   #taj-canvas, .taj-fallback { transition: none; }
