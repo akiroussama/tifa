@@ -25,7 +25,7 @@
     canvas.width = Math.round(width * ratio); canvas.height = Math.round(height * ratio);
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     const small = width < 700;
-    petals = Array.from({ length: small ? 6 : 12 }, () => petal(true));
+    petals = Array.from({ length: small ? 16 : 34 }, () => petal(true));
     sparks = Array.from({ length: small ? 22 : 46 }, () => spark(true));
     if (!running()) drawStill();
   }
