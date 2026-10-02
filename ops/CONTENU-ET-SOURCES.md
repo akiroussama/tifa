@@ -52,13 +52,13 @@ Le fil a également montré des repartages de l’ambassade sur l’Ayurveda et 
 
 Un annuaire Findglocal et des résultats LinkedIn ont aidé à identifier des pistes. Ils ne sont pas utilisés pour affirmer un bureau actuel ni pour importer leurs photos ou événements non vérifiés dans cette version.
 
-## Direction artistique proposée : Horizons partagés
+## Direction artistique : L’Inde en partage. La Tunisie au cœur.
 
-Composition originale : ouverture plein écran bleu nuit, typographie éditoriale à grande échelle, globe géométrique en cuivre reliant Tunis à New Delhi, espaces ivoire et lignes fines. Les photos réelles prennent ensuite la place centrale. L’histoire utilise une abstraction d’arches plutôt qu’une scène touristique. Le logo officiel est conservé.
+Refonte complète à la demande d’Oussama : ciel safran, marbre blanc, grès rose et vert profond ; titre contemporain centré ; Taj Mahal en vraie 3D avec jardins, minarets et bassin reflétant le monument. La suite alterne sceau à rayons, quatre pavillons, rencontres photographiques en lignes, histoire rose et registre des fondateurs. Le logo officiel est conservé.
 
-Les fondateurs sont présentés par leur nom et leur rôle ; les initiales évitent les portraits inventés ou empruntés. Les modules, la palette, le premier écran, les animations et l’organisation ne reprennent pas le diorama japonais, les kanji, les pétales ni la composition ABSFJ.
+Les fondateurs sont présentés par leur nom et leur rôle ; les initiales évitent les portraits inventés ou empruntés. Les modules, la palette, la typographie, le premier écran et l’organisation sont propres à TIFA. Le motif à rayons rappelle le chakra ; les arches et la grille jali accompagnent le langage architectural du monument.
 
-L’effet recherché est une présence institutionnelle forte, sans animations envahissantes. Le globe dispose d’une pause, respecte la réduction des mouvements et s’arrête dans un onglet masqué. L’illustration est décorative ; aucune relation diplomatique ou géographique supplémentaire n’en est déduite.
+L’effet recherché est une présence institutionnelle forte avec une identité indienne explicite. Le Taj est une interprétation architecturale créée en code, et non un relevé historique ou une photographie d’événement. Three.js 0.186.1 est livré localement avec licence MIT depuis le paquet officiel npm. La scène dispose d’une pause, respecte la réduction des mouvements et suspend le rendu dans un onglet masqué ou hors écran ; un SVG reprend le monument quand WebGL est indisponible.
 
 ## Pièces nécessaires pour compléter le site
 

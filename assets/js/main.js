@@ -62,8 +62,5 @@
   document.querySelector('#photo-prev').addEventListener('click', () => { photoIndex = (photoIndex - 1 + photoItems.length) % photoItems.length; renderPhoto(); });
   document.querySelector('#photo-next').addEventListener('click', () => { photoIndex = (photoIndex + 1) % photoItems.length; renderPhoto(); });
   photoDialog.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); photoIndex = (photoIndex + (e.key === 'ArrowRight' ? 1 : -1) + photoItems.length) % photoItems.length; renderPhoto(); } });
-  const motion = document.querySelector('#motion-toggle'); const reduced = window.matchMedia('(prefers-reduced-motion: reduce)'); let paused = false;
-  const refreshMotion = () => { document.body.classList.toggle('motion-paused', paused || document.hidden || reduced.matches); motion.setAttribute('aria-pressed', String(paused)); motion.textContent = reduced.matches ? 'Animation réduite' : paused ? 'Reprendre l’animation ▷' : 'Pause de l’animation Ⅱ'; motion.disabled = reduced.matches; };
-  motion.addEventListener('click', () => { paused = !paused; refreshMotion(); }); document.addEventListener('visibilitychange', refreshMotion); reduced.addEventListener('change', refreshMotion); refreshMotion();
   document.querySelector('#year').textContent = new Date().getFullYear();
 })();

@@ -10,7 +10,7 @@ Depuis `C:\workspace\tifa` :
 python -m http.server 4175 --bind 127.0.0.1
 ```
 
-Ouvrir `http://127.0.0.1:4175/`. `index.html` peut aussi être ouvert directement dans un navigateur.
+Ouvrir `http://127.0.0.1:4175/`. Un serveur HTTP est nécessaire pour charger le module 3D ; l’ouverture directe du fichier conserve l’illustration de repli.
 
 ## Importer dans Vercel
 
@@ -26,9 +26,11 @@ Le déploiement est pris en charge par Oussama.
 
 ## Direction visuelle
 
-**Horizons partagés** : bleu nuit, cuivre clair et ivoire ; typographie éditoriale ; globe tracé en SVG avec lien entre Tunis et New Delhi ; grands espaces ; quatre objectifs ; rencontres en images ; histoire ; bureau fondateur ; galerie ; contact.
+**L’Inde en partage. La Tunisie au cœur.** : ouverture panoramique autour du Taj Mahal en vraie 3D, ciel safran, marbre blanc, grès rose et vert profond. Titres contemporains sans serif, pavillons des quatre objectifs, rencontres en lignes photographiques, chapitre historique rose, registre des fondateurs et galerie à arches. La composition et les composants ont été reconstruits pour TIFA.
 
-Le logo fourni `Logo_vec.png` est copié à l’identique. Le globe est une illustration géométrique créée en code ; il n’est pas une photographie d’événement. Aucun portrait ni événement d’ABSFJ n’est repris.
+Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal est une interprétation architecturale procédurale en Three.js : géométrie, perspective, ombres, minarets, jardins et reflet du bassin. Il ne constitue ni une photographie d’événement ni un relevé patrimonial exact. Aucun portrait ni événement d’ABSFJ n’est repris.
+
+La dépendance Three.js 0.186.1 et sa licence MIT sont conservées localement dans `assets/vendor/`, à partir du paquet officiel npm. Aucun CDN ni étape de compilation ne sont nécessaires. `assets/js/taj-scene.js` gère le rendu ; `assets/images/taj-fallback.svg` assure le repli sans WebGL ou sans JavaScript.
 
 ## Mettre à jour les contenus
 
@@ -51,9 +53,10 @@ Le nom `Constitution d’une Association` du document reçu désigne une annonce
 ```powershell
 node --check assets/js/content.js
 node --check assets/js/main.js
+node --check assets/js/taj-scene.js
 python scripts/validate_site.py
 ```
 
-La vérification visuelle se fait dans le navigateur sur bureau et mobile. Les dialogues natifs assurent le parcours clavier ; les filtres ont un état accessible ; la préférence de réduction des mouvements est respectée. Le bouton de pause et la suspension dans les onglets masqués contrôlent l’animation du globe.
+La vérification visuelle se fait dans le navigateur sur bureau et mobile. Les dialogues natifs assurent le parcours clavier ; les filtres ont un état accessible. La scène 3D dispose d’une pause réelle, respecte la préférence de réduction des mouvements et s’arrête dans les onglets masqués et hors écran. Le DPR et la fréquence sont limités pour maîtriser la charge graphique.
 
 Pas de synchronisation Facebook planifiée dans cette version. Pas de déploiement lancé depuis cette session.
