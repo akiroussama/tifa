@@ -26,7 +26,16 @@ Le déploiement est pris en charge par Oussama.
 
 ## Direction visuelle
 
-**L’Inde en partage. La Tunisie au cœur.** : ouverture panoramique autour du Taj Mahal en vraie 3D, ciel safran, marbre blanc, grès rose et vert profond. Titres contemporains sans serif, pavillons des quatre objectifs, rencontres en lignes photographiques, chapitre historique rose, registre des fondateurs et galerie à arches. La composition et les composants ont été reconstruits pour TIFA.
+**« Nuit d’Agra »** : le Taj Mahal en vraie 3D au crépuscule, sous un ciel indigo-safran, devant une lune et un grand mandala doré qui tourne lentement. Les intérieurs des arches s’illuminent, des diyas scintillent le long du bassin, des pétales de souci tombent et une guirlande toran de fleurs de souci et de feuilles de manguier pend en haut de la page. À l’ouverture, la caméra survole les jardins avant de se poser face au monument.
+
+Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur fond sombre), l’énergie colorée d’Optimist India, les jali moghols et les palais du Rajasthan (arches polylobées, treillis à étoiles à huit branches, palette indigo, safran, souci, or et ivoire).
+
+- Titres en Cormorant Garamond, texte en DM Sans, accents en devanagari (Tiro Devanagari Hindi) et en arabe (Amiri).
+- Fonds ivoire recouverts d’un treillis jali ; sections sombres indigo et bordeaux pour l’histoire et le contact.
+- Cartes, galerie et fiches en forme d’arches mogholes.
+- Réseaux sociaux mis en avant : icônes dans l’en-tête et le hero, une section dédiée juste après le hero (LinkedIn, Instagram, Facebook), un rail latéral sur grand écran, le bloc contact et le pied de page.
+
+Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `toran.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. Les pétales et étincelles du hero sont dans `assets/js/hero-fx.js` ; ils s’arrêtent avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
 
 Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal est une interprétation architecturale procédurale en Three.js : géométrie, perspective, ombres, minarets, jardins et reflet du bassin. Il ne constitue ni une photographie d’événement ni un relevé patrimonial exact. Aucun portrait ni événement d’ABSFJ n’est repris.
 
@@ -58,6 +67,7 @@ Le nom `Constitution d’une Association` du document reçu désigne une annonce
 node --check assets/js/content.js
 node --check assets/js/main.js
 node --check assets/js/taj-scene.js
+node --check assets/js/hero-fx.js
 python scripts/validate_site.py
 ```
 

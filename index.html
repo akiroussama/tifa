@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TIFA — Association d’Amitié Tuniso-Indienne</title>
   <meta name="description" content="Découvrez TIFA, l’Association d’Amitié Tuniso-Indienne : son histoire, ses objectifs, ses fondateurs et ses rencontres entre la Tunisie et l’Inde.">
-  <meta name="theme-color" content="#f8dec1">
+  <meta name="theme-color" content="#1a1036">
   <meta property="og:title" content="TIFA — L’Inde en partage. La Tunisie au cœur.">
   <meta property="og:description" content="Culture, coopération et amitié entre la Tunisie et l’Inde. Découvrez l’association et ses rencontres.">
   <meta property="og:type" content="website">
@@ -13,66 +13,155 @@
   <link rel="icon" href="assets/images/logo-tifa-officiel.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Tiro+Devanagari+Hindi&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/taj-scene.css" rel="stylesheet">
   <script src="assets/js/content.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/hero-fx.js" defer></script>
   <script type="module" src="assets/js/taj-scene.js"></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 21.9v-8.1h2.75l.42-3.2H13.6V8.57c0-.92.26-1.55 1.58-1.55h1.69V4.16A22.6 22.6 0 0 0 14.4 4c-2.44 0-4.1 1.49-4.1 4.22v2.38H7.55v3.2h2.75v8.1z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></symbol>
+  </svg>
   <a class="skip-link" href="#main">Aller au contenu</a>
   <header class="header" id="header">
-    <a class="brand" href="#accueil" aria-label="TIFA — accueil"><img src="assets/images/logo-tifa-officiel.png" alt="" width="54" height="54"><span><strong>TIFA<span class="brand-dot">.</span></strong><small>Amitié Tuniso-Indienne</small></span></a>
+    <a class="brand" href="#accueil" aria-label="TIFA — accueil"><img src="assets/images/logo-tifa-officiel.png" alt="" width="52" height="52"><span><strong>TIFA</strong><small>Amitié Tuniso-Indienne</small></span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" type="button"><span>Menu</span><i aria-hidden="true"></i></button>
-    <nav id="navigation" aria-label="Navigation principale"><a href="#association">L’association</a><a href="#rencontres">Nos rencontres</a><a href="#histoire">Notre histoire</a><a href="#fondateurs">Les fondateurs</a><a class="nav-contact" href="#contact">Échangeons <span aria-hidden="true">↗</span></a></nav>
+    <nav id="navigation" aria-label="Navigation principale">
+      <a href="#association">L’association</a><a href="#rencontres">Rencontres</a><a href="#histoire">Histoire</a><a href="#fondateurs">Fondateurs</a><a href="#galerie">Galerie</a>
+      <span class="nav-social" aria-label="TIFA sur les réseaux sociaux">
+        <a class="social-dot linkedin" href="https://www.linkedin.com/company/tunisian-indian-friendship-association/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+        <a class="social-dot instagram" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        <a class="social-dot facebook" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+      </span>
+      <a class="nav-contact" href="#contact">Échangeons</a>
+    </nav>
   </header>
+
+  <aside class="social-rail" aria-label="Suivre TIFA">
+    <a class="linkedin" href="https://www.linkedin.com/company/tunisian-indian-friendship-association/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+    <a class="instagram" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+    <a class="facebook" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+    <span aria-hidden="true">Suivez-nous</span>
+  </aside>
+
   <main id="main">
     <section class="hero" id="accueil" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <p class="eyebrow hero-eyebrow"><span class="country-dot tunisia-dot" aria-hidden="true"></span> Tunisie <span class="separator" aria-hidden="true">×</span> Inde <span class="country-dot india-dot" aria-hidden="true"></span></p>
-        <h1 id="hero-title">L’Inde en partage.<br><span>La Tunisie au cœur.</span></h1>
-        <p class="hero-description">Deux cultures, mille façons de se rencontrer.</p>
-      </div>
+      <div class="hero-sky" aria-hidden="true"><i class="stars"></i><i class="stars stars-far"></i><i class="moon"></i></div>
+      <img class="hero-mandala" src="assets/images/mandala.svg" alt="" aria-hidden="true">
+      <div class="hero-jali hero-jali-left" aria-hidden="true"></div>
+      <div class="hero-jali hero-jali-right" aria-hidden="true"></div>
+      <div class="toran" aria-hidden="true"></div>
       <div class="taj-stage">
-        <div id="taj-scene" class="taj-scene" role="img" aria-label="Interprétation architecturale du Taj Mahal en trois dimensions, entre marbre blanc, jardins et bassin">
+        <div id="taj-scene" class="taj-scene" role="img" aria-label="Interprétation architecturale du Taj Mahal en trois dimensions au crépuscule, avec ses jardins, son bassin et des lampes allumées">
           <img class="taj-fallback" src="assets/images/taj-fallback.svg" alt="" fetchpriority="high">
           <canvas id="taj-canvas" aria-hidden="true"></canvas>
         </div>
-        <div class="scene-caption"><span>Agra, Inde <i aria-hidden="true">·</i> Taj Mahal</span><button id="motion-toggle" type="button" aria-pressed="false" hidden>Pause de l’animation <span aria-hidden="true">Ⅱ</span></button></div>
       </div>
-      <div class="hero-bottom"><p><strong>L’amitié se cultive.</strong> TIFA rapproche la Tunisie et l’Inde à travers la culture, les rencontres et la coopération.</p><a class="button button-saffron" href="#association">Découvrir TIFA <span aria-hidden="true">↗</span></a><a class="hero-scroll" href="#rencontres" aria-label="Découvrir nos rencontres"><span aria-hidden="true">↓</span></a></div>
+      <canvas class="hero-petals" id="hero-petals" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="hero-eyebrow"><span lang="ar">تونس</span><i aria-hidden="true">✦</i>Tunisie × Inde<i aria-hidden="true">✦</i><span lang="hi">भारत</span></p>
+        <h1 id="hero-title">L’Inde en partage.<span>La Tunisie au cœur.</span></h1>
+        <p class="hero-description">L’Association d’Amitié Tuniso-Indienne rapproche nos deux pays par la culture, les rencontres et la coopération.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#association">Découvrir TIFA <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <div class="hero-social" aria-label="Suivre TIFA">
+            <a class="linkedin" href="https://www.linkedin.com/company/tunisian-indian-friendship-association/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+            <a class="instagram" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a class="facebook" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="scene-caption"><span>Agra, Inde <i aria-hidden="true">·</i> Taj Mahal au crépuscule</span><button id="motion-toggle" type="button" aria-pressed="false" hidden>Pause de l’animation <span aria-hidden="true">Ⅱ</span></button></div>
     </section>
-    <div class="country-strip"><span><b lang="ar">تونس</b> TUNISIE</span><span class="strip-center"><i aria-hidden="true">✳</i> Des liens, des idées, des horizons <i aria-hidden="true">✳</i></span><span>INDE <b lang="hi">भारत</b></span></div>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Amitié</span><b lang="hi">मित्रता</b><span lang="ar">صداقة</span><span>Culture</span><b lang="hi">संस्कृति</b><span lang="ar">ثقافة</span><span>Coopération</span><b lang="hi">सहयोग</b><span lang="ar">تعاون</span><span>Patrimoine</span><b lang="hi">विरासत</b><span lang="ar">تراث</span><span>Amitié</span><b lang="hi">मित्रता</b><span lang="ar">صداقة</span><span>Culture</span><b lang="hi">संस्कृति</b><span lang="ar">ثقافة</span><span>Coopération</span><b lang="hi">सहयोग</b><span lang="ar">تعاون</span><span>Patrimoine</span><b lang="hi">विरासत</b><span lang="ar">تراث</span></div></div>
+
+    <section class="section socials" id="reseaux" aria-labelledby="socials-title">
+      <div class="section-heading centered reveal"><p class="eyebrow">Suivez l’amitié en direct</p><h2 id="socials-title">Rejoignez la communauté TIFA</h2><p>Nos rencontres, nos photos et nos annonces paraissent d’abord sur nos réseaux. Abonnez-vous pour ne rien manquer.</p></div>
+      <div class="social-cards">
+        <a class="social-card linkedin reveal" href="https://www.linkedin.com/company/tunisian-indian-friendship-association/" target="_blank" rel="noopener noreferrer">
+          <span class="social-medallion"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+          <strong>LinkedIn</strong><small>Tunisian Indian Friendship Association</small>
+          <p>Coopération, formations et actualités institutionnelles.</p>
+          <span class="social-cta">Suivre sur LinkedIn <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="social-card instagram reveal" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer">
+          <span class="social-medallion"><svg aria-hidden="true"><use href="#i-instagram"/></svg></span>
+          <strong>Instagram</strong><small>@tifa.tunisiaindia</small>
+          <p>Les moments forts de nos rencontres, en images.</p>
+          <span class="social-cta">Suivre sur Instagram <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="social-card facebook reveal" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer">
+          <span class="social-medallion"><svg aria-hidden="true"><use href="#i-facebook"/></svg></span>
+          <strong>Facebook</strong><small>TIFA · Tunisia India Friendship</small>
+          <p>Toutes nos publications, événements et albums photo.</p>
+          <span class="social-cta">Suivre sur Facebook <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+    </section>
+
     <section class="section association" id="association" aria-labelledby="association-title">
-      <div class="intro-grid"><div class="association-seal" aria-hidden="true"><span>TUNISIE • INDE •</span><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="42"/><circle cx="60" cy="60" r="7"/><path d="M60 18v84M18 60h84M30.3 30.3l59.4 59.4M30.3 89.7l59.4-59.4M43.9 21.2l32.2 77.6M21.2 43.9l77.6 32.2M21.2 76.1l77.6-32.2M43.9 98.8l32.2-77.6M49.1 19.4l21.8 81.2M19.4 49.1l81.2 21.8M19.4 70.9l81.2-21.8M49.1 100.6l21.8-81.2"/></svg><small>L’AMITIÉ EN MOUVEMENT</small></div><div><p class="eyebrow dark">01 / L’association</p><h2 id="association-title">La rencontre<br>ouvre tous les possibles<span class="title-dot">.</span></h2><p class="intro-text">L’Association d’Amitié Tuniso-Indienne œuvre au rapprochement entre les deux pays. Son engagement s’inscrit dans quatre objectifs publiés au Journal officiel de la République tunisienne.</p><a class="text-link" href="#histoire">Nos origines et notre cadre associatif <span aria-hidden="true">↗</span></a></div></div>
+      <div class="intro-grid">
+        <div class="association-seal reveal" aria-hidden="true"><img src="assets/images/mandala.svg" alt=""><img class="seal-logo" src="assets/images/logo-tifa-officiel.png" alt=""></div>
+        <div class="reveal"><p class="eyebrow">L’association</p><h2 id="association-title">La rencontre ouvre <em>tous les possibles</em></h2><p class="intro-text">L’Association d’Amitié Tuniso-Indienne œuvre au rapprochement entre les deux pays. Son engagement s’inscrit dans quatre objectifs publiés au Journal officiel de la République tunisienne.</p><a class="text-link" href="#histoire">Nos origines et notre cadre associatif ↗</a></div>
+      </div>
       <div class="mission-grid">
-        <article class="mission"><span class="mission-number">01</span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 45h36M18 45V24q12-22 24 0v21M25 45V30q5-10 10 0v15M12 20l18-9 18 9"/></svg><h3>Partager le patrimoine</h3><p>Faire connaître le patrimoine culturel et historique tunisien en Inde.</p></article>
-        <article class="mission"><span class="mission-number">02</span><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="22" cy="30" r="14"/><circle cx="38" cy="30" r="14"/><path d="M15 30h30M30 16v28"/></svg><h3>Encourager la coopération</h3><p>Développer les échanges culturels, techniques et économiques, en coordination avec les autorités compétentes.</p></article>
-        <article class="mission"><span class="mission-number">03</span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M10 40q10-10 20 0t20 0M10 48q10-10 20 0t20 0M30 34V12M21 19l9-7 9 7"/><circle cx="46" cy="15" r="5"/></svg><h3>Ouvrir les horizons</h3><p>Contribuer à la promotion du tourisme tunisien auprès du public indien.</p></article>
-        <article class="mission"><span class="mission-number">04</span><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="15" cy="18" r="6"/><circle cx="45" cy="18" r="6"/><circle cx="30" cy="44" r="6"/><path d="M21 18h18M18 24l9 14M42 24l-9 14"/></svg><h3>Tisser des liens durables</h3><p>Nouer des relations avec des associations aux objectifs similaires, en Tunisie et à l’international.</p></article>
+        <article class="mission reveal"><span class="mission-number">I</span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 45h36M18 45V24q12-22 24 0v21M25 45V30q5-10 10 0v15M12 20l18-9 18 9"/></svg><h3>Partager le patrimoine</h3><p>Faire connaître le patrimoine culturel et historique tunisien en Inde.</p></article>
+        <article class="mission reveal"><span class="mission-number">II</span><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="22" cy="30" r="14"/><circle cx="38" cy="30" r="14"/><path d="M15 30h30M30 16v28"/></svg><h3>Encourager la coopération</h3><p>Développer les échanges culturels, techniques et économiques, en coordination avec les autorités compétentes.</p></article>
+        <article class="mission reveal"><span class="mission-number">III</span><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M10 40q10-10 20 0t20 0M10 48q10-10 20 0t20 0M30 34V12M21 19l9-7 9 7"/><circle cx="46" cy="15" r="5"/></svg><h3>Ouvrir les horizons</h3><p>Contribuer à la promotion du tourisme tunisien auprès du public indien.</p></article>
+        <article class="mission reveal"><span class="mission-number">IV</span><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="15" cy="18" r="6"/><circle cx="45" cy="18" r="6"/><circle cx="30" cy="44" r="6"/><path d="M21 18h18M18 24l9 14M42 24l-9 14"/></svg><h3>Tisser des liens durables</h3><p>Nouer des relations avec des associations aux objectifs similaires, en Tunisie et à l’international.</p></article>
       </div>
       <p class="source-note">Objectifs adaptés de l’annonce de constitution — JORT n° 118 du 9 octobre 2024, référence 2024R02522APSF1.</p>
-      <div class="cooperation-highlight"><div><p class="eyebrow">Coopération / Novembre 2025</p><h3>Commerce, culture<br>et jeunesse.</h3></div><div><p>Un protocole d’entente signé avec la Chambre de commerce Inde–Tunisie ouvre un cadre d’échanges dans ces trois domaines, selon le rapport d’activités de TIFA.</p><a class="text-link light" href="constitution.html#rapport-activites">Retrouver cette étape dans le rapport <span aria-hidden="true">↗</span></a></div></div>
+      <div class="cooperation-highlight reveal"><div><p class="eyebrow">Coopération · Novembre 2025</p><h3>Commerce, culture <em>et jeunesse</em></h3></div><div><p>Un protocole d’entente signé avec la Chambre de commerce Inde–Tunisie ouvre un cadre d’échanges dans ces trois domaines, selon le rapport d’activités de TIFA.</p><a class="text-link light" href="constitution.html#rapport-activites">Retrouver cette étape dans le rapport ↗</a></div></div>
     </section>
+
     <section class="section encounters" id="rencontres" aria-labelledby="encounters-title">
-      <div class="section-heading"><div><p class="eyebrow dark">02 / Nos rencontres</p><h2 id="encounters-title">L’amitié prend vie<span class="title-dot">.</span></h2></div><div class="heading-side"><p>Des moments de dialogue, de transmission<br>et de découverte entre nos deux pays.</p><a class="text-link" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer">Suivre TIFA sur Facebook <span aria-hidden="true">↗</span></a></div></div>
-      <div class="filters" role="group" aria-label="Filtrer les rencontres"><button type="button" data-filter="all" aria-pressed="true">Toutes les rencontres</button><button type="button" data-filter="culture" aria-pressed="false">Culture</button><button type="button" data-filter="cooperation" aria-pressed="false">Coopération</button><button type="button" data-filter="diplomatie" aria-pressed="false">Diplomatie</button><button type="button" data-filter="association" aria-pressed="false">Vie associative</button></div>
+      <div class="section-heading reveal"><div><p class="eyebrow">Nos rencontres</p><h2 id="encounters-title">L’amitié prend vie</h2></div><div class="heading-side"><p>Des moments de dialogue, de transmission et de découverte entre nos deux pays.</p><a class="text-link" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer">Toutes nos publications sur Facebook ↗</a></div></div>
+      <div class="filters" role="group" aria-label="Filtrer les rencontres"><button type="button" data-filter="all" aria-pressed="true">Toutes</button><button type="button" data-filter="culture" aria-pressed="false">Culture</button><button type="button" data-filter="cooperation" aria-pressed="false">Coopération</button><button type="button" data-filter="diplomatie" aria-pressed="false">Diplomatie</button><button type="button" data-filter="association" aria-pressed="false">Vie associative</button></div>
       <p id="filter-status" class="sr-only" aria-live="polite"></p>
       <div id="events-grid" class="events-grid"></div>
       <button class="archive-toggle" id="archive-toggle" type="button" aria-controls="events-grid" aria-expanded="false" hidden>Voir toutes les rencontres</button>
       <noscript><p>Les fiches interactives nécessitent JavaScript. Retrouvez les publications sur <a href="https://www.facebook.com/profile.php?id=61570485117575">la page Facebook TIFA</a>.</p></noscript>
       <p class="archive-note">Rencontres documentées par les publications TIFA, l’ambassade et le rapport d’activités 2024–2026. Les archives restent ouvertes à de nouveaux éléments. <a href="constitution.html#rapport-activites">Consulter les sources et la précision des dates ↗</a></p>
     </section>
+
     <section class="history" id="histoire" aria-labelledby="history-title">
-      <div class="history-art" aria-hidden="true"><div class="date-day">09<span>OCTOBRE</span></div><span class="date-year">2024</span><p>Le début<br>d’une histoire commune.</p><span class="history-flower">✳</span></div>
-      <div class="history-copy"><p class="eyebrow">03 / Notre histoire</p><h2 id="history-title">Un premier pas.<br>Des liens durables.</h2><p>La constitution de l’Association d’Amitié Tuniso-Indienne est publiée au Journal officiel le <strong>9 octobre 2024</strong>. La page TIFA retient cette même date comme date de fondation.</p><p>Son objet culturel et ses objectifs dessinent un cadre commun : valoriser le patrimoine tunisien, encourager la coopération et créer des liens entre les deux pays.</p><p>Le rapport d’activités retrace ensuite un protocole d’entente avec la Chambre de commerce Inde–Tunisie en novembre 2025 et une assemblée générale consacrée à la période 2024–2025, tenue en juin 2026.</p><div class="history-reference"><span>JORT N° 118</span><span>2024R02522APSF1</span></div><a class="text-link" href="constitution.html">Lire l’annonce de constitution <span aria-hidden="true">↗</span></a></div>
+      <img class="history-mandala" src="assets/images/mandala.svg" alt="" aria-hidden="true">
+      <div class="history-art reveal" aria-hidden="true"><span class="date-day">09</span><span class="date-month">Octobre</span><span class="date-year">2024</span><p>Le début d’une histoire commune</p></div>
+      <div class="history-copy reveal"><p class="eyebrow">Notre histoire</p><h2 id="history-title">Un premier pas, <em>des liens durables</em></h2><p>La constitution de l’Association d’Amitié Tuniso-Indienne est publiée au Journal officiel le <strong>9 octobre 2024</strong>. La page TIFA retient cette même date comme date de fondation.</p><p>Son objet culturel et ses objectifs dessinent un cadre commun : valoriser le patrimoine tunisien, encourager la coopération et créer des liens entre les deux pays.</p><p>Le rapport d’activités retrace ensuite un protocole d’entente avec la Chambre de commerce Inde–Tunisie en novembre 2025 et une assemblée générale consacrée à la période 2024–2025, tenue en juin 2026.</p><div class="history-reference"><span>JORT N° 118</span><span>2024R02522APSF1</span></div><a class="text-link light" href="constitution.html">Lire l’annonce de constitution ↗</a></div>
     </section>
-    <section class="section founders" id="fondateurs" aria-labelledby="founders-title"><div class="section-heading"><div><p class="eyebrow dark">04 / Les fondateurs</p><h2 id="founders-title">Une volonté commune<span class="title-dot">.</span></h2></div><p class="founders-intro">Les cinq fondateurs et leurs fonctions,<br>tels que publiés au Journal officiel en 2024.</p></div><div id="founders-grid" class="founders-grid"></div><p class="source-note">Composition fondatrice publiée au JORT. La composition actuelle du bureau sera précisée à réception d’un document actualisé de l’association.</p></section>
-    <section class="section gallery-section" id="galerie" aria-labelledby="gallery-title"><div class="section-heading"><div><p class="eyebrow dark">05 / Regards croisés</p><h2 id="gallery-title">Des instants qui nous lient<span class="title-dot">.</span></h2></div><p>Photographies publiées par TIFA.<br>Chaque image garde le lien avec sa rencontre.</p></div><div id="gallery-grid" class="gallery-grid"></div></section>
-    <section class="contact" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">06 / Restons en lien</p><h2 id="contact-title">Et si l’on écrivait<br>la suite ensemble ?</h2><p>Une question, une idée de coopération ou l’envie de rejoindre l’association ?<br>Contactez directement TIFA.</p><a class="button button-saffron" href="mailto:tifa.tunisiaindia@gmail.com">Écrire à l’association <span aria-hidden="true">↗</span></a></div><address><span class="contact-label">TIFA / TUNIS</span><a href="mailto:tifa.tunisiaindia@gmail.com">tifa.tunisiaindia@gmail.com</a><a href="tel:+21654497995">+216 54 497 995</a><span>13 avenue Salah Ben Youssef<br>1013 El Manar 2, Tunis</span><a class="text-link light" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer">La page Facebook TIFA <span aria-hidden="true">↗</span></a><div class="social-links" aria-label="Réseaux sociaux de TIFA"><a href="https://www.linkedin.com/company/tunisian-indian-friendship-association/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></address></section>
+
+    <section class="section founders" id="fondateurs" aria-labelledby="founders-title"><div class="section-heading reveal"><div><p class="eyebrow">Les fondateurs</p><h2 id="founders-title">Une volonté commune</h2></div><p class="heading-side">Les cinq fondateurs et leurs fonctions, tels que publiés au Journal officiel en 2024.</p></div><div id="founders-grid" class="founders-grid"></div><p class="source-note">Composition fondatrice publiée au JORT. La composition actuelle du bureau sera précisée à réception d’un document actualisé de l’association.</p></section>
+
+    <section class="section gallery-section" id="galerie" aria-labelledby="gallery-title"><div class="section-heading reveal"><div><p class="eyebrow">Regards croisés</p><h2 id="gallery-title">Des instants qui nous lient</h2></div><div class="heading-side"><p>Photographies publiées par TIFA. Chaque image garde le lien avec sa rencontre.</p><a class="text-link" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer">Plus de photos sur Instagram ↗</a></div></div><div id="gallery-grid" class="gallery-grid"></div></section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy reveal"><p class="eyebrow">Restons en lien</p><h2 id="contact-title">Et si l’on écrivait <em>la suite ensemble ?</em></h2><p>Une question, une idée de coopération ou l’envie de rejoindre l’association ? Contactez directement TIFA.</p><a class="button button-gold" href="mailto:tifa.tunisiaindia@gmail.com">Écrire à l’association <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <address class="reveal"><span class="contact-label">TIFA · Tunis</span><a href="mailto:tifa.tunisiaindia@gmail.com">tifa.tunisiaindia@gmail.com</a><a href="tel:+21654497995">+216 54 497 995</a><span>13 avenue Salah Ben Youssef<br>1013 El Manar 2, Tunis</span>
+        <div class="contact-social" aria-label="Réseaux sociaux de TIFA">
+          <a class="linkedin" href="https://www.linkedin.com/company/tunisian-indian-friendship-association/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+          <a class="instagram" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a>
+          <a class="facebook" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-facebook"/></svg>Facebook</a>
+        </div>
+      </address>
+    </section>
   </main>
-  <footer><a class="footer-brand" href="#accueil">TIFA<span>.</span></a><p>Association d’Amitié Tuniso-Indienne<br><span lang="ar" dir="rtl">جمعية الصداقة التونسية الهندية</span></p><div><a href="constitution.html">Cadre associatif & sources</a><a href="mentions-legales.html">Informations légales</a><small>© <span id="year">2026</span> TIFA</small></div></footer>
+  <footer>
+    <a class="footer-brand" href="#accueil"><img src="assets/images/logo-tifa-officiel.png" alt="" width="44" height="44">TIFA</a>
+    <p>Association d’Amitié Tuniso-Indienne<br><span lang="ar" dir="rtl">جمعية الصداقة التونسية الهندية</span></p>
+    <div class="footer-social" aria-label="TIFA sur les réseaux sociaux">
+      <a class="linkedin" href="https://www.linkedin.com/company/tunisian-indian-friendship-association/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+      <a class="instagram" href="https://www.instagram.com/tifa.tunisiaindia/" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+      <a class="facebook" href="https://www.facebook.com/profile.php?id=61570485117575" target="_blank" rel="noopener noreferrer" aria-label="TIFA sur Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+    </div>
+    <div class="footer-links"><a href="constitution.html">Cadre associatif & sources</a><a href="mentions-legales.html">Informations légales</a><small>© <span id="year">2026</span> TIFA</small></div>
+  </footer>
   <dialog id="event-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Fermer la fiche">×</button><div id="dialog-content"></div></dialog>
   <dialog id="photo-dialog" aria-labelledby="photo-caption"><button class="dialog-close" type="button" aria-label="Fermer la photo">×</button><figure><img id="photo-image" src="assets/images/logo-tifa-officiel.png" alt=""><figcaption id="photo-caption"></figcaption></figure><div class="photo-controls"><button id="photo-prev" type="button" aria-label="Photo précédente">←</button><span id="photo-count" aria-live="polite"></span><button id="photo-next" type="button" aria-label="Photo suivante">→</button></div><a id="photo-source" target="_blank" rel="noopener noreferrer">Voir la publication source ↗</a></dialog>
 </body>

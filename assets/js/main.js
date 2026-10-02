@@ -81,4 +81,13 @@
   document.querySelector('#photo-next').addEventListener('click', () => { photoIndex = (photoIndex + 1) % photoItems.length; renderPhoto(); });
   photoDialog.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); photoIndex = (photoIndex + (e.key === 'ArrowRight' ? 1 : -1) + photoItems.length) % photoItems.length; renderPhoto(); } });
   document.querySelector('#year').textContent = new Date().getFullYear();
+  const header = document.querySelector('#header'); const rail = document.querySelector('.social-rail'); const hero = document.querySelector('.hero');
+  const onScroll = () => { header.classList.toggle('is-scrolled', window.scrollY > 40); rail?.classList.toggle('is-visible', window.scrollY > hero.offsetHeight * .8); };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  document.querySelectorAll('.event-card, .founder').forEach(el => el.classList.add('reveal'));
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    const reveal = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); reveal.unobserve(entry.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
+  }
 })();
