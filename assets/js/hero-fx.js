@@ -25,7 +25,7 @@
     canvas.width = Math.round(width * ratio); canvas.height = Math.round(height * ratio);
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     const small = width < 700;
-    petals = Array.from({ length: small ? 16 : 34 }, () => petal(true));
+    petals = Array.from({ length: small ? 6 : 12 }, () => petal(true));
     sparks = Array.from({ length: small ? 22 : 46 }, () => spark(true));
     if (!running()) drawStill();
   }
@@ -66,6 +66,17 @@
   new IntersectionObserver(entries => { inView = entries[0].isIntersecting; start(); }).observe(hero);
   document.addEventListener('visibilitychange', start);
   reduced.addEventListener('change', start);
-  if (toggle) new MutationObserver(start).observe(toggle, { attributes: true, attributeFilter: ['aria-pressed'] });
+  function syncToggle() {
+    if (!toggle) return;
+    const paused = toggle.getAttribute('aria-pressed') === 'true';
+    toggle.disabled = reduced.matches;
+    toggle.innerHTML = reduced.matches ? 'Animation réduite' : paused ? 'Reprendre l’animation <span aria-hidden="true">▷</span>' : 'Pause de l’animation <span aria-hidden="true">Ⅱ</span>';
+  }
+  if (toggle) {
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => { toggle.setAttribute('aria-pressed', String(toggle.getAttribute('aria-pressed') !== 'true')); syncToggle(); start(); });
+    reduced.addEventListener('change', syncToggle);
+    syncToggle();
+  }
   resize(); start();
 })();

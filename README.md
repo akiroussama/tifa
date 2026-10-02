@@ -26,7 +26,7 @@ Le déploiement est pris en charge par Oussama.
 
 ## Direction visuelle
 
-**« Nuit d’Agra »** : le Taj Mahal en vraie 3D au crépuscule, sous un ciel indigo-safran, devant une lune et un grand mandala doré qui tourne lentement. Les intérieurs des arches s’illuminent, des diyas scintillent le long du bassin, des pétales de souci tombent et une guirlande toran de fleurs de souci et de feuilles de manguier pend en haut de la page. À l’ouverture, la caméra survole les jardins avant de se poser face au monument.
+**« Nuit d’Agra »** : le Taj Mahal au crépuscule, en illustration fixe et fidèle vue depuis le bassin, sous un ciel indigo-safran, devant une lune et un mandala doré immobile. Seuls quelques pétales de souci et des étincelles bougent discrètement.
 
 Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur fond sombre), l’énergie colorée d’Optimist India, les jali moghols et les palais du Rajasthan (arches polylobées, treillis à étoiles à huit branches, palette indigo, safran, souci, or et ivoire).
 
@@ -35,11 +35,9 @@ Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur f
 - Cartes, galerie et fiches en forme d’arches mogholes.
 - Réseaux sociaux mis en avant : icônes dans l’en-tête et le hero, une section dédiée juste après le hero (LinkedIn, Instagram, Facebook), un rail latéral sur grand écran, le bloc contact et le pied de page.
 
-Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `toran.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. Les pétales et étincelles du hero sont dans `assets/js/hero-fx.js` ; ils s’arrêtent avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
+Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. Les pétales et étincelles du hero sont dans `assets/js/hero-fx.js` ; ils s’arrêtent avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
 
-Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal est une interprétation architecturale procédurale en Three.js : géométrie, perspective, ombres, minarets, jardins et reflet du bassin. Il ne constitue ni une photographie d’événement ni un relevé patrimonial exact. Aucun portrait ni événement d’ABSFJ n’est repris.
-
-La dépendance Three.js 0.186.1 et sa licence MIT sont conservées localement dans `assets/vendor/`, à partir du paquet officiel npm. Les deux modules ont été minifiés une fois avec Terser 5.51.2, en conservant les noms des exports et les commentaires de licence ; leur taille totale passe de 2,12 Mo à 0,76 Mo. Aucun CDN ni étape de compilation ne sont nécessaires. `assets/js/taj-scene.js` gère le rendu ; `assets/images/taj-fallback.svg` assure le repli sans WebGL ou sans JavaScript.
+Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal du hero est une illustration fixe (`assets/images/taj-mahal.svg`), sans animation, générée par `scripts/build_taj.py` à partir des proportions de l’élévation réelle (plinthe de 95 m, mausolée de 57 m, dôme et épi vers 73 m, minarets d’environ 42 m), vue depuis le bassin de réflexion. Ce n’est ni une photographie ni un relevé patrimonial exact. Aucun portrait ni événement d’ABSFJ n’est repris.
 
 ## Mettre à jour les contenus
 
@@ -66,11 +64,10 @@ Le nom `Constitution d’une Association` du document reçu désigne une annonce
 ```powershell
 node --check assets/js/content.js
 node --check assets/js/main.js
-node --check assets/js/taj-scene.js
 node --check assets/js/hero-fx.js
 python scripts/validate_site.py
 ```
 
-La vérification visuelle se fait dans le navigateur sur bureau et mobile. Les dialogues natifs assurent le parcours clavier ; les filtres ont un état accessible. La scène 3D dispose d’une pause réelle, respecte la préférence de réduction des mouvements et s’arrête dans les onglets masqués et hors écran. Le DPR et la fréquence sont limités pour maîtriser la charge graphique.
+La vérification visuelle se fait dans le navigateur sur bureau et mobile. Les dialogues natifs assurent le parcours clavier ; les filtres ont un état accessible. Les pétales et étincelles du hero disposent d’une pause réelle, respectent la préférence de réduction des mouvements et s’arrêtent dans les onglets masqués et hors écran.
 
 Pas de synchronisation Facebook planifiée dans cette version. Pas de déploiement lancé depuis cette session.
