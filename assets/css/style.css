@@ -409,3 +409,22 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; }
 }
+/* The activity report adds a cooperation milestone and a compact archive. */
+.cooperation-highlight { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: .85fr 1.15fr; gap: 55px; align-items: center; max-width: 1240px; margin: 56px auto 0; padding: 42px 48px; border-radius: 28px; border: 1px solid rgba(217, 165, 74, .55); color: var(--ivory); background: radial-gradient(circle at 90% 10%, rgba(244, 162, 29, .3), transparent 50%), linear-gradient(135deg, var(--indigo), var(--plum)); box-shadow: var(--shadow); }
+.cooperation-highlight::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("../images/jali-dark.svg") 0 0 / 96px; opacity: .25; }
+.cooperation-highlight .eyebrow { color: var(--marigold); margin-bottom: 14px; }
+.cooperation-highlight h3 { font-size: clamp(32px, 3.4vw, 46px); }
+.cooperation-highlight h3 em { color: var(--gold-light); }
+.cooperation-highlight > div > p:not(.eyebrow) { color: rgba(252, 246, 234, .82); font-size: 16px; margin-bottom: 18px; }
+.archive-toggle { display: block; width: 100%; max-width: 1240px; margin: 32px auto 0; padding: 18px 22px; min-height: 56px; border: 1px solid var(--gold); border-radius: 999px; background: #fffdf8; color: var(--ink); font-size: 15px; font-weight: 700; transition: background .3s, color .3s; }
+.archive-toggle:hover { background: var(--indigo); color: var(--gold-light); }
+.archive-note a { color: var(--saffron); text-decoration: underline; text-underline-offset: 3px; }
+.dialog-sources { display: flex; flex-wrap: wrap; gap: 14px 25px; }
+.document-main details { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 20px; }
+.document-main summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--saffron); }
+.report-excerpts { margin-top: 25px; padding-left: 23px; }
+.report-excerpts li { padding-left: 5px; }
+.report-excerpts strong { color: var(--ink); }
+@media (max-width: 900px) {
+  .cooperation-highlight { grid-template-columns: 1fr; gap: 20px; padding: 30px 26px; margin-top: 40px; }
+}

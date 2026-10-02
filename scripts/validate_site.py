@@ -56,8 +56,18 @@ if len(event_ids) != len(set(event_ids)):
     errors.append('Duplicate event IDs')
 photos = []
 for event in data['events']:
-    if not event['source'].startswith('https://'):
-        errors.append(f'{event["id"]}: source URL missing')
+    for source in [event, *event.get('additionalSources', [])]:
+        url = source['source']
+        if not url.startswith('https://'):
+            reference = urlsplit(url)
+            if (reference.path not in pages or not reference.fragment
+                    or reference.fragment not in pages[reference.path].ids):
+                errors.append(f'{event["id"]}: missing documentary source {url}')
+    if event.get('sourceType') == 'activity-report':
+        if not event.get('sourceParagraphs') or not event.get('original'):
+            errors.append(f'{event["id"]}: report excerpt or locator missing')
+        if event.get('datePrecision') == 'month' and len(event['date']) != 7:
+            errors.append(f'{event["id"]}: invented day in monthly report date')
     if len(event['images']) != len(event['imageAlts']):
         errors.append(f'{event["id"]}: mismatched images/captions')
     for identifier in event['images']:
@@ -73,6 +83,12 @@ for photo in photos:
         errors.append(f'Photo missing provenance: {photo}')
 if data['coverage']['complete']:
     errors.append('Coverage must remain partial until archives are fully verified')
+if data.get('activityReport'):
+    if len([e for e in data['events'] if e.get('sourceType') == 'activity-report']) != data['activityReport']['addedEvents']:
+        errors.append('Activity report count does not match its added events')
+    dinner = next(e for e in data['events'] if e['id'] == 'diner-ambassadrice-2025')
+    if dinner['date'] != '2025-05-16':
+        errors.append('Conflicting dinner month must not replace the precise embassy date')
 
 if errors:
     raise SystemExit('\n'.join(errors))
