@@ -33,7 +33,7 @@ Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur f
 - Titres en Cormorant Garamond, texte en DM Sans, accents en devanagari (Tiro Devanagari Hindi) et en arabe (Amiri).
 - Fonds ivoire recouverts d’un treillis jali ; sections sombres indigo et bordeaux pour l’histoire et le contact.
 - Cartes, galerie et fiches en forme d’arches mogholes.
-- Réseaux sociaux mis en avant : icônes dans l’en-tête et le hero, une section dédiée juste après le hero (LinkedIn, Instagram, Facebook), un rail latéral sur grand écran, le bloc contact et le pied de page.
+- Réseaux sociaux présents mais discrets : petites icônes monochromes dans l’en-tête, le bloc contact et le pied de page, et une section « Rejoignez la communauté TIFA » en bas de page.
 
 Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. Les pétales et étincelles du hero sont dans `assets/js/hero-fx.js` ; ils s’arrêtent avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
 
