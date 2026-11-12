@@ -5,8 +5,8 @@ const tifaHiReportMonth = 'रिपोर्ट में महीना औ�
 window.TIFA_MESSAGES.hi = {
   text: {
     "Les photographies des rencontres proviennent de deux publications de la page Facebook TIFA. Les fiches conservent leurs liens vers la source. Les activités de 2024 à 2026 sont également adaptées du rapport d’activités transmis par TIFA. Les": "कार्यक्रमों की तस्वीरें TIFA के Facebook पेज की दो पोस्ट से ली गई हैं। कार्यक्रमों के विवरण में मूल स्रोतों के लिंक हैं। 2024 से 2026 तक की गतिविधियों का विवरण TIFA की गतिविधि रिपोर्ट पर भी आधारित है।",
-    "Diorama en relief de l’amphithéâtre d’El Jem, des habitations troglodytiques de Matmata et du Taj Mahal, de la Tunisie vers l’Inde.": "ट्यूनीशिया से भारत तक: एल जेम का रोमन ऐम्फ़ीथिएटर, मातमाता के भूमिगत घर और ताजमहल एक त्रिआयामी दृश्य में।",
-    "Matmata": "मातमाता",
+    "Diorama en relief de l’amphithéâtre d’El Jem, d’une oasis du Sud tunisien avec des palmiers dattiers et un jeune dromadaire, et du Taj Mahal, de la Tunisie vers l’Inde.": "ट्यूनीशिया से भारत तक: एल जेम का रोमन ऐम्फ़ीथिएटर, खजूर के पेड़ों और एक नन्हे एक-कूबड़ वाले ऊँट के साथ दक्षिणी ट्यूनीशिया का नखलिस्तान और ताजमहल एक त्रिआयामी दृश्य में।",
+    "Oasis du Sud tunisien": "दक्षिणी ट्यूनीशिया का नखलिस्तान",
     "Texte publié en français": "यह पाठ फ़्रांसीसी में प्रकाशित है",
     "Date mise à jour par le bureau de TIFA.": "तारीख TIFA के कार्यकारी मंडल ने अद्यतन की है।",
     "Photo {count}": "फ़ोटो {count}",

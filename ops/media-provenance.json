@@ -188,16 +188,15 @@
     "referencePage": "https://whc.unesco.org/fr/list/38/"
   },
   {
-    "file": "assets/images/diorama-matmata.svg",
-    "role": "Interprétation originale des habitations troglodytiques de Matmata",
+    "file": "assets/images/diorama-oasis.svg",
+    "role": "Oasis du Sud tunisien, palmiers dattiers avec grappes de dattes, source et jeune dromadaire à une bosse",
     "viewBox": [
       0,
       0,
       1200,
       640
     ],
-    "source": "Dessin vectoriel original TIFA",
-    "referencePage": "https://iris.unirc.it/handle/20.500.12318/20885"
+    "source": "Dessin vectoriel original TIFA, composition stylisée demandée par l’utilisateur"
   },
   {
     "file": "assets/images/diorama-taj.svg",

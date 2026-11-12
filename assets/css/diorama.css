@@ -57,7 +57,7 @@ html:is([lang="ar"], [lang="hi"]) .hero-diorama :is(h1 span, .hero-country span)
 .scene-terrain { --z: -15px; }
 .scene-taj { --z: 1px; }
 .scene-el-jem { --z: 27px; }
-.scene-matmata { --z: 48px; }
+.scene-oasis { --z: 48px; }
 .diorama-shadow { position: absolute; inset: auto 7% 1% 7%; height: 9%; border-radius: 50%; background: radial-gradient(ellipse, #0a061a9e, transparent 70%); }
 .tifa-diorama[data-motion="running"] .diorama-float { animation: diorama-hover 7s ease-in-out infinite alternate; }
 .tifa-diorama[data-motion="paused"] .diorama-float { animation: diorama-hover 7s ease-in-out infinite alternate; animation-play-state: paused; }

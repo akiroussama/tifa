@@ -23,7 +23,7 @@ La compilation ne copie que les quatre pages et `assets/` dans `public/`. L’AP
 
 ## Direction visuelle
 
-**D’El Jem à Agra** : un seul diorama réunit l’amphithéâtre d’El Jem, les cours creusées de Matmata et le Taj Mahal. Comme sur ABSFJ, des calques vectoriels répartis en profondeur s’inclinent doucement au mouvement du pointeur. La Tunisie précède l’Inde dans les drapeaux, le titre et la scène dans les quatre langues.
+**D’El Jem à Agra** : un seul diorama réunit l’amphithéâtre d’El Jem, une oasis du Sud tunisien avec palmiers dattiers, grappes de dattes et jeune dromadaire, et le Taj Mahal. Comme sur ABSFJ, des calques vectoriels répartis en profondeur s’inclinent doucement au mouvement du pointeur. La Tunisie précède l’Inde dans les drapeaux, le titre et la scène dans les quatre langues.
 
 Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur fond sombre), l’énergie colorée d’Optimist India, les jali moghols et les palais du Rajasthan (arches polylobées, treillis à étoiles à huit branches, palette indigo, safran, souci, or et ivoire).
 
@@ -34,7 +34,7 @@ Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur f
 
 Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. `assets/css/diorama.css` compose les cinq dessins SVG et `assets/js/diorama.js` gère leur mouvement. La scène reste lisible sans JavaScript et s’immobilise avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
 
-Le logo fourni `Logo_vec.png` est copié à l’identique. Les visuels d’[El Jem](https://whc.unesco.org/fr/list/38/), de [Matmata](https://iris.unirc.it/handle/20.500.12318/20885) et du [Taj Mahal](https://whc.unesco.org/en/list/252/) sont des dessins originaux à partir de références architecturales. Le Taj s’appuie sur la géométrie vectorielle existante de TIFA. La scène est une composition, non un relevé ou un paysage réel.
+Le logo fourni `Logo_vec.png` est copié à l’identique. Les visuels d’[El Jem](https://whc.unesco.org/fr/list/38/) et du [Taj Mahal](https://whc.unesco.org/en/list/252/) sont des dessins originaux à partir de références architecturales. L’oasis est une illustration originale du Sud tunisien, avec palmiers dattiers et jeune dromadaire, demandée par l’utilisateur. Le Taj s’appuie sur la géométrie vectorielle existante de TIFA. La scène est une composition, non un relevé ou un paysage réel.
 
 ## Mettre à jour les contenus
 
