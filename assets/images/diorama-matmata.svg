@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640">
+  <defs>
+    <linearGradient id="sand" x1="0" y1=".2" x2="1" y2=".83" gradientUnits="objectBoundingBox">
+      <stop stop-color="#ebc69b"/><stop offset=".37" stop-color="#ca956f"/><stop offset=".73" stop-color="#a66459"/><stop offset="1" stop-color="#713e47"/>
+    </linearGradient>
+    <linearGradient id="shelf" x1="0" y1="0" x2=".42" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#d28f6b"/><stop offset=".39" stop-color="#9b5650"/><stop offset="1" stop-color="#4d2a42"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1=".15" x2="1" y2=".78" gradientUnits="objectBoundingBox">
+      <stop stop-color="#f0d4ad"/><stop offset=".34" stop-color="#d19c7a"/><stop offset=".69" stop-color="#a56253"/><stop offset="1" stop-color="#6e3947"/>
+    </linearGradient>
+    <linearGradient id="court" x1=".17" y1=".15" x2=".83" y2=".83" gradientUnits="objectBoundingBox">
+      <stop stop-color="#e1b988"/><stop offset=".47" stop-color="#c78961"/><stop offset="1" stop-color="#945055"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0" y1=".12" x2=".58" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#3a2338"/><stop offset=".66" stop-color="#582e44"/><stop offset="1" stop-color="#914d4e"/>
+    </linearGradient>
+    <linearGradient id="lip" x1=".12" y1="0" x2=".73" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#f7d6a7"/><stop offset=".53" stop-color="#d1906d"/><stop offset="1" stop-color="#a25a51"/>
+    </linearGradient>
+    <linearGradient id="farLip" x1=".1" y1="0" x2=".8" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#d9ae85"/><stop offset="1" stop-color="#88504f"/>
+    </linearGradient>
+    <radialGradient id="contact">
+      <stop stop-color="#271529" stop-opacity=".48"/><stop offset=".67" stop-color="#2c172f" stop-opacity=".27"/><stop offset="1" stop-color="#2c172f" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="pit-large">
+      <path d="M195 495C202 465 251 442 317 439c68-3 125 11 143 39 23 34-28 66-99 76-67 9-137-1-158-29-7-9-11-19-8-30Z"/>
+    </clipPath>
+    <clipPath id="pit-rear">
+      <path d="M448 440c9-18 42-29 78-28 34 1 59 9 72 21 15 15 3 34-26 44-36 13-95 11-116-5-11-9-14-20-8-32Z"/>
+    </clipPath>
+    <clipPath id="pit-small">
+      <path d="M486 532c8-16 35-26 65-28 34-2 65 6 81 20 18 16 8 34-21 44-37 14-86 13-112-1-17-9-21-23-13-35Z"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(0 11.5) scale(.998 .979)">
+  <!-- Low ledge of the plateau, with a darker exposed face beneath the courts. -->
+  <ellipse cx="382" cy="581" rx="287" ry="26" fill="url(#contact)"/>
+  <path d="M103 546c23-16 37-36 52-53 18-22 28-33 47-45 25-16 67-24 111-24 53 0 86-13 128-18 58-7 102-3 144 12 32 12 54 32 58 51 4 16-2 22 8 37l18 28c11 18 11 33-2 42-19 13-72 22-135 25-54 3-97-1-138-4-40-4-79 0-114 1-61 2-118-5-148-17-19-8-32-19-29-35Z" fill="url(#shelf)"/>
+  <path d="M104 544c21-15 37-33 52-53 18-21 29-32 47-44 26-16 69-23 113-23 49 0 82-13 125-18 58-7 102-3 144 12 32 12 54 32 58 51 4 16-2 22 8 37l18 28c11 17 10 28-6 38-23 14-71 19-134 21-54 2-93-2-136-5-40-3-78 2-113 2-61 1-118-5-148-17-16-7-31-17-28-29Z" fill="url(#sand)"/>
+  <path d="M113 550c26-13 36-37 51-52 8-10 23-27 43-40 22-14 64-22 104-23 34-1 49-4 68-8M373 440c29-11 57-21 77-22 39-4 70-2 92 4M613 452c10 14 13 29 12 43" fill="none" stroke="#ffe0b4" stroke-opacity=".44" stroke-width="2" stroke-linecap="round"/>
+  <path d="M130 564c26 9 55 11 82 12m-53 3c24 5 53 7 73 8m145-4c37-4 67 5 99 7m100 2c32-1 58-7 78-15M614 502c12 3 25 15 32 26" fill="none" stroke="#75404a" stroke-opacity=".58" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- Rear courtyard, partly shaded by its western rim. -->
+  <path d="M432 437c12-21 45-32 90-33 44-1 77 11 92 27 16 18 4 40-31 53-41 15-103 14-133-5-19-11-26-27-18-42Z" fill="#7f4a4c" opacity=".72"/>
+  <path d="M436 436c11-20 45-32 88-32 42 0 76 10 91 27 16 18 3 37-30 50-42 15-101 15-132-3-19-11-25-27-17-42Z" fill="url(#farLip)"/>
+  <g clip-path="url(#pit-rear)">
+    <path d="M440 407h166v90H440z" fill="url(#wall)"/>
+    <path d="M447 453c16-13 27-15 48-17 25-2 39-6 59-3 23 3 40 7 53 14M452 463c13-5 22-8 33-9m80-6c16 1 29 6 38 11" fill="none" stroke="#7b4647" stroke-opacity=".42" stroke-width="1.5"/>
+    <path d="M447 471c14-12 42-17 74-19 37-1 70 4 87 17l-4 25H444Z" fill="url(#court)"/>
+    <path d="m477 461 4-18c1-6 8-10 14-10 7 0 12 4 12 11l-1 13Z" fill="#e8c19a"/>
+    <path d="m481 460 3-16c1-5 6-8 11-8 5 0 8 3 8 8l-1 13Z" fill="url(#inner)"/>
+    <path d="M531 456v-18c0-6 4-11 11-11 7 0 13 4 14 10l2 19Z" fill="#d9a985"/>
+    <path d="M535 455v-16c0-5 3-9 8-9 5 0 9 3 10 8l2 17Z" fill="url(#inner)"/>
+    <path d="m568 461-1-15c-1-4 3-7 7-6 5 1 8 5 10 10l3 16Z" fill="#8f5050"/>
+    <path d="M449 466c15 8 45 14 76 14 35 0 64-7 77-16-6 22-40 32-77 33-39 0-69-7-76-31Z" fill="#583046" opacity=".45"/>
+  </g>
+  <path d="M440 440c15-20 48-29 86-30 29 0 59 6 75 17" fill="none" stroke="#f4cf9e" stroke-opacity=".75" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M454 476c32 16 88 16 131-1 11-5 21-11 25-17" fill="none" stroke="#ce8b69" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Main courtyard: cut earth, vaulted entrances and a bright compacted floor. -->
+  <path d="M177 496c8-34 66-63 138-68 75-5 137 10 162 44 20 26 10 55-23 73-30 18-70 27-119 30-56 3-110-6-138-27-19-15-25-35-20-52Z" fill="#79414a" opacity=".82"/>
+  <path d="M178 491c10-33 64-61 137-66 74-5 138 10 163 43 20 26 10 52-23 71-30 18-70 27-119 30-56 3-110-6-138-27-19-15-26-34-20-51Z" fill="url(#lip)"/>
+  <path d="M185 491c12-31 61-53 128-58 64-5 129 10 152 36 20 23 13 47-15 64-28 17-67 25-113 28-51 3-108-4-134-24-17-13-24-30-18-46Z" fill="#9f5c55"/>
+  <g clip-path="url(#pit-large)">
+    <path d="M192 432h288v132H192z" fill="url(#wall)"/>
+    <path d="M190 487c16-10 27-17 50-22 29-6 53-7 69-10 41-7 68-5 104 0 24 4 47 11 61 24M190 497c20-11 36-16 49-18m23-3 34-5m71-3c15 0 31 2 44 6m14 3c16 4 32 13 45 23M198 512c16-9 38-15 56-16m103-11c24 0 47 3 68 9" fill="none" stroke="#835052" stroke-opacity=".43" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M196 502c37-32 86-42 131-43 59-2 104 10 136 32l-8 11c-31-22-82-31-126-30-49 1-96 9-128 34Z" fill="#fff0c7" opacity=".1"/>
+    <path d="M193 538c19-20 59-31 112-38 64-9 122-3 175 21l-1 44H194Z" fill="url(#court)"/>
+    <path d="M213 532c26-13 70-22 110-24 47-3 92 1 124 14-29-4-51 0-69 2-50 5-99 8-165 8Z" fill="#f1d2a2" opacity=".45"/>
+    <path d="M240 518c17-9 39-14 61-16l-21 8-23 11Z" fill="#7c4850" opacity=".36"/>
+    <path d="M303 512c19-8 42-13 62-10l-20 6-19 7Z" fill="#7c4850" opacity=".39"/>
+    <path d="m368 518 30-14 28 4-18 9Z" fill="#71404c" opacity=".46"/>
+
+    <path d="m230 517 7-27c3-12 13-20 27-23 15-3 25 2 26 13l1 22-61 15Z" fill="#b37b62"/>
+    <path d="m234 516 6-25c3-11 13-18 25-21 13-3 22 2 23 12l1 20Z" fill="#efd6b1"/>
+    <path d="m239 514 6-22c2-9 10-15 20-18 11-3 18 1 19 10l1 18Z" fill="url(#inner)"/>
+    <path d="m241 513 6-22c2-6 8-12 18-15l-7 5c-6 4-8 8-8 15l-2 15Z" fill="#a96b58"/>
+    <path d="m239 514 46-12 6 2-55 14Z" fill="#d39971"/>
+
+    <path d="m300 507 2-28c1-13 12-22 25-23 16-1 27 7 28 20l2 26Z" fill="#aa705c"/>
+    <path d="m303 507 2-27c1-12 10-20 23-21 13-1 23 6 24 18l2 25Z" fill="#f1d6ae"/>
+    <path d="m307 505 2-25c1-10 9-17 19-18 11-1 20 5 21 16l2 23Z" fill="url(#inner)"/>
+    <path d="m308 505 2-25c1-7 5-12 12-15l-3 5c-4 6-3 11-3 17v18Z" fill="#af735d"/>
+    <path d="m307 505 44-4 5 3-51 6Z" fill="#d59d75"/>
+
+    <path d="m368 504-1-25c0-10 9-17 22-16 15 2 25 10 29 20l8 26Z" fill="#915149"/>
+    <path d="m371 504-1-24c0-9 8-15 20-14 13 1 22 9 26 19l7 23Z" fill="#d5a480"/>
+    <path d="m375 504-1-23c0-7 6-13 16-12 11 1 19 8 22 16l6 22Z" fill="url(#inner)"/>
+    <path d="m376 504-1-21c0-5 3-10 8-11-2 4-3 9-1 16l2 17Z" fill="#9a5e54"/>
+    <path d="m375 504 43 3 6 4-51-4Z" fill="#b77961"/>
+
+    <path d="m434 517-6-22c-2-6 1-10 6-9 6 1 11 6 14 12l9 26Z" fill="#995854"/>
+    <path d="m437 518-6-22c-1-4 1-7 4-6 4 1 8 5 10 10l7 22Z" fill="#583346"/>
+    <path d="M196 514c21 20 58 29 111 33 58 5 125-12 163-36-11 27-54 45-131 51-65 5-122-7-143-33Z" fill="#6c3d4a" opacity=".45"/>
+    <path d="M201 528c24 20 78 29 134 25 61-4 107-22 133-41-20 31-64 53-126 58-60 5-120-7-141-42Z" fill="#4b2c43" opacity=".43"/>
+    <path d="M274 528c8-4 20-6 29-4 8 2 8 6 1 8-8 3-23 4-29 1-4-1-4-3-1-5Z" fill="#ab6b59" opacity=".54"/>
+    <path d="M270 526c7-3 18-4 25-3 4 1 4 3 1 4-5 2-14 3-21 3-7-1-9-2-5-4Z" fill="#e5b386"/>
+    <path d="M273 526c5-2 14-2 18-1 3 1 0 2-3 2-6 2-13 1-15-1Z" fill="#8b5350"/>
+  </g>
+  <path d="M181 491c11-34 68-61 139-65 41-2 75 2 104 10" fill="none" stroke="#f4d1a4" stroke-width="3" stroke-opacity=".82" stroke-linecap="round"/>
+  <path d="M196 540c26 19 75 29 126 27 48-1 89-10 123-24" fill="none" stroke="#c78261" stroke-width="4" stroke-linecap="round"/>
+  <path d="M210 549c23 12 48 16 75 18m102-7c25-5 43-12 59-21" fill="none" stroke="#f3c394" stroke-opacity=".45" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- Lower pocket and the sloping approach cut into its left side. -->
+  <path d="M452 566c9-9 17-15 23-23l11-11 15 17-18 16c-9 7-14 12-19 18l-22-1Z" fill="#79464d" opacity=".78"/>
+  <path d="M446 568c10-7 21-13 29-22l12-13 11 11-17 17-22 16-22 1Z" fill="#bc805e"/>
+  <path d="m451 571 21-15m-15 18 18-13m-9 16 15-13" fill="none" stroke="#f0b78c" stroke-opacity=".58" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M474 529c10-19 42-32 78-35 38-3 72 7 92 23 20 16 14 39-19 55-39 19-101 19-137 0-19-10-24-26-14-43Z" fill="#78444b"/>
+  <path d="M476 525c12-18 42-29 76-31 38-3 71 6 91 22 21 17 11 37-20 52-40 18-100 18-135 0-19-10-23-26-12-43Z" fill="url(#farLip)"/>
+  <g clip-path="url(#pit-small)">
+    <path d="M477 498h170v90H477z" fill="url(#wall)"/>
+    <path d="M483 538c15-8 35-16 59-18 42-3 68 2 95 15M487 547c14-7 30-11 45-13m46-4c15 2 35 7 53 15" fill="none" stroke="#804850" stroke-opacity=".46" stroke-width="1.3"/>
+    <path d="M481 553c13-10 40-16 69-18 30-2 68 4 91 16l-3 28H481Z" fill="url(#court)"/>
+    <path d="m509 546 3-15c1-8 7-13 16-15 9-1 15 4 15 11l-1 15Z" fill="#e8bc97"/>
+    <path d="m512 546 3-15c1-6 6-11 13-12 7-1 12 3 12 10l-1 13Z" fill="url(#inner)"/>
+    <path d="M554 542v-18c0-8 6-13 14-13 9 0 16 6 17 13l2 19Z" fill="#e2b896"/>
+    <path d="M558 541v-17c0-6 4-10 11-10 7 0 13 5 14 11l1 17Z" fill="url(#inner)"/>
+    <path d="m598 547-2-14c-1-6 3-8 9-6 6 1 12 7 13 12l4 15Z" fill="#ab6b59"/>
+    <path d="m601 548-2-14c-1-4 2-6 6-5 5 2 9 6 11 11l3 13Z" fill="#63374a"/>
+    <path d="M486 548c15 16 44 22 75 21 34-1 64-9 80-20-8 19-34 28-75 33-33 4-72-6-80-34Z" fill="#5a3348" opacity=".51"/>
+  </g>
+  <path d="M482 529c10-16 40-28 71-29 27-2 60 3 79 16" fill="none" stroke="#eabd91" stroke-opacity=".74" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M495 569c29 13 78 14 116 1 11-4 25-11 31-17" fill="none" stroke="#b9755d" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- A few loose stones and shallow surface cuts catch the left light. -->
+  <path d="m137 541 8-6 11 3 3 5-12 4-10-2Zm27-44 7-6 10 2 1 5-10 4-8-2Zm266 73 6-5 9 1 4 4-7 4-12-1Zm204-79 7-2 8 5-2 5-10-1Zm11 76 7-5 8 1 1 5-9 4Z" fill="#e1b088" opacity=".85"/>
+  <path d="m137 545 10 2 12-4-2 4-12 4-7-3Zm27-45 8 2 10-4-2 4-7 3-9-2Zm266 73 12 1 7-4-2 5-9 2-8-2Zm215-6 7 5 9-4-2 5-8 2-6-4Z" fill="#8a514f" opacity=".83"/>
+  <path d="m150 562 12 4 14-1m-13-56 11-8m224 80 18-4 12 2m191-95 7 3m-5 14 7 2m-87 83 15 2 9-1" fill="none" stroke="#f0c598" stroke-width="1.2" stroke-opacity=".54" stroke-linecap="round"/>
+  </g>
+</svg>

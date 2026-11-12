@@ -23,7 +23,7 @@ La compilation ne copie que les quatre pages et `assets/` dans `public/`. L’AP
 
 ## Direction visuelle
 
-**El Jem et le Taj Mahal** : l’accueil place côte à côte une photographie de l’amphithéâtre tunisien et l’illustration du Taj Mahal. La Tunisie précède l’Inde dans les drapeaux, le titre et les visuels, dans les quatre langues. La palette indigo et or, le mandala et les pétales reprennent la direction « Nuit d’Agra ».
+**D’El Jem à Agra** : un seul diorama réunit l’amphithéâtre d’El Jem, les cours creusées de Matmata et le Taj Mahal. Comme sur ABSFJ, des calques vectoriels répartis en profondeur s’inclinent doucement au mouvement du pointeur. La Tunisie précède l’Inde dans les drapeaux, le titre et la scène dans les quatre langues.
 
 Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur fond sombre), l’énergie colorée d’Optimist India, les jali moghols et les palais du Rajasthan (arches polylobées, treillis à étoiles à huit branches, palette indigo, safran, souci, or et ivoire).
 
@@ -32,11 +32,9 @@ Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur f
 - Cartes, galerie et fiches en forme d’arches mogholes.
 - Réseaux sociaux présents mais discrets : petites icônes monochromes dans l’en-tête, le bloc contact et le pied de page, et une section « Rejoignez la communauté TIFA » en bas de page.
 
-Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. Les pétales et étincelles du hero sont dans `assets/js/hero-fx.js` ; ils s’arrêtent avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
+Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. `assets/css/diorama.css` compose les cinq dessins SVG et `assets/js/diorama.js` gère leur mouvement. La scène reste lisible sans JavaScript et s’immobilise avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
 
-Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal du hero est une illustration fixe (`assets/images/taj-mahal.svg`), sans animation, générée par `scripts/build_taj.py` à partir des proportions de l’élévation réelle (plinthe de 95 m, mausolée de 57 m, dôme et épi vers 73 m, minarets d’environ 42 m), vue depuis le bassin de réflexion. Ce n’est ni une photographie ni un relevé patrimonial exact. Aucun portrait ni événement d’ABSFJ n’est repris.
-
-La [photographie d’El Jem](https://commons.wikimedia.org/wiki/File:The_Amphitheater_of_El_Djem.jpg) est d’Agnieszka Wolska, sous [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Elle a été redimensionnée et convertie en WebP. Le crédit public figure sur la page des sources.
+Le logo fourni `Logo_vec.png` est copié à l’identique. Les visuels d’[El Jem](https://whc.unesco.org/fr/list/38/), de [Matmata](https://iris.unirc.it/handle/20.500.12318/20885) et du [Taj Mahal](https://whc.unesco.org/en/list/252/) sont des dessins originaux à partir de références architecturales. Le Taj s’appuie sur la géométrie vectorielle existante de TIFA. La scène est une composition, non un relevé ou un paysage réel.
 
 ## Mettre à jour les contenus
 
@@ -69,7 +67,7 @@ Le nom `Constitution d’une Association` du document reçu désigne une annonce
 ```powershell
 node --check assets/js/content.js
 node --check assets/js/main.js
-node --check assets/js/hero-fx.js
+node --check assets/js/diorama.js
 npm test
 npm run build
 python scripts/validate_site.py

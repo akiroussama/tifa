@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Tiro+Devanagari+Hindi&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/landmarks.css" rel="stylesheet">
+  <link href="assets/css/diorama.css" rel="stylesheet">
   <script src="assets/js/content.js" defer></script>
   <script src="assets/js/i18n/en.js" defer></script>
   <script src="assets/js/i18n/ar.js" defer></script>
@@ -23,7 +23,7 @@
   <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/publications.js" defer></script>
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/hero-fx.js" defer></script>
+  <script src="assets/js/diorama.js" defer></script>
 </head>
 <body>
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -54,31 +54,35 @@
   </header>
 
   <main id="main">
-    <section class="hero hero-duo" id="accueil" aria-labelledby="hero-title">
-      <div class="hero-sky" aria-hidden="true"><i class="stars"></i><i class="stars stars-far"></i><i class="moon"></i></div>
+    <section class="hero hero-diorama" id="accueil" aria-labelledby="hero-title">
+      <div class="hero-sky" aria-hidden="true"><i class="stars"></i><i class="stars stars-far"></i></div>
       <img class="hero-mandala" src="assets/images/mandala.svg" alt="" aria-hidden="true">
       <div class="hero-jali hero-jali-left" aria-hidden="true"></div>
       <div class="hero-jali hero-jali-right" aria-hidden="true"></div>
-      <canvas class="hero-petals" id="hero-petals" aria-hidden="true"></canvas>
       <div class="hero-content">
         <p class="hero-eyebrow hero-countries" dir="ltr"><span class="hero-country"><svg viewBox="0 0 30 20" aria-hidden="true"><use href="#i-flag-tn"/></svg><span>Tunisie</span></span><i aria-hidden="true">✦</i><span class="hero-country"><svg viewBox="0 0 30 20" aria-hidden="true"><use href="#i-flag-in"/></svg><span>Inde</span></span></p>
-        <h1 id="hero-title">La Tunisie au cœur.<span>L’Inde en partage.</span></h1>
+        <h1 id="hero-title">La Tunisie au cœur. <span>L’Inde en partage.</span></h1>
         <p class="hero-description">L’Association d’Amitié Tuniso-Indienne rapproche nos deux pays par la culture, les rencontres et la coopération.</p>
         <div class="hero-actions">
           <a class="button button-gold" href="#association">Découvrir TIFA <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
-      <div class="hero-landmarks" dir="ltr" role="group" aria-label="Les monuments de Tunisie et d’Inde">
-        <figure class="landmark landmark-tunisia">
-          <div class="landmark-media"><img src="assets/images/el-jem.webp" alt="L’amphithéâtre romain d’El Jem, en Tunisie" width="1200" height="800" fetchpriority="high"></div>
-          <figcaption class="landmark-caption" dir="auto"><strong>Amphithéâtre d’El Jem</strong><span>El Jem, Tunisie</span></figcaption>
-        </figure>
-        <figure class="landmark landmark-india">
-          <div class="landmark-media"><img src="assets/images/taj-mahal.svg" alt="Le Taj Mahal au crépuscule, vu depuis son bassin de réflexion, entre ses quatre minarets et ses allées de cyprès" width="1200" height="1000" fetchpriority="high"></div>
-          <figcaption class="landmark-caption" dir="auto"><strong>Taj Mahal</strong><span>Agra, Inde</span></figcaption>
-        </figure>
-      </div>
-      <div class="scene-caption"><button id="motion-toggle" type="button" aria-pressed="false" hidden>Pause de l’animation <span aria-hidden="true">Ⅱ</span></button></div>
+      <figure class="tifa-diorama" id="tifa-diorama">
+        <div class="diorama-viewport" role="img" aria-label="Diorama en relief de l’amphithéâtre d’El Jem, des habitations troglodytiques de Matmata et du Taj Mahal, de la Tunisie vers l’Inde.">
+          <div class="diorama-shadow" aria-hidden="true"></div>
+          <div class="diorama-float" aria-hidden="true"><div class="diorama-world">
+            <img class="scene-layer scene-horizon" src="assets/images/diorama-horizon.svg" alt="" width="1200" height="640">
+            <img class="scene-layer scene-terrain" src="assets/images/diorama-terrain.svg" alt="" width="1200" height="640">
+            <img class="scene-layer scene-taj" src="assets/images/diorama-taj.svg" alt="" width="1200" height="640" fetchpriority="high">
+            <img class="scene-layer scene-el-jem" src="assets/images/diorama-el-jem.svg" alt="" width="1200" height="640" fetchpriority="high">
+            <img class="scene-layer scene-matmata" src="assets/images/diorama-matmata.svg" alt="" width="1200" height="640">
+          </div></div>
+        </div>
+        <figcaption class="diorama-caption">
+          <ol class="diorama-places" dir="ltr"><li><span dir="auto">Amphithéâtre d’El Jem</span></li><li><span dir="auto">Matmata</span></li><li><span dir="auto">Taj Mahal</span></li></ol>
+          <button id="motion-toggle" type="button" aria-pressed="false" hidden>Pause de l’animation <span aria-hidden="true">Ⅱ</span></button>
+        </figcaption>
+      </figure>
     </section>
 
     <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Amitié</span><b lang="hi">मित्रता</b><span lang="ar">صداقة</span><span>Culture</span><b lang="hi">संस्कृति</b><span lang="ar">ثقافة</span><span>Coopération</span><b lang="hi">सहयोग</b><span lang="ar">تعاون</span><span>Patrimoine</span><b lang="hi">विरासत</b><span lang="ar">تراث</span><span>Amitié</span><b lang="hi">मित्रता</b><span lang="ar">صداقة</span><span>Culture</span><b lang="hi">संस्कृति</b><span lang="ar">ثقافة</span><span>Coopération</span><b lang="hi">सहयोग</b><span lang="ar">تعاون</span><span>Patrimoine</span><b lang="hi">विरासत</b><span lang="ar">تراث</span></div></div>

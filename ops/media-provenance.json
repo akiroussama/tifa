@@ -154,19 +154,61 @@
     "transformations": "Aucune, copie exacte du fichier"
   },
   {
-    "file": "assets/images/el-jem.webp",
-    "title": "The Amphitheater of El Djem",
-    "author": "Agnieszka Wolska",
-    "capturedAt": "2009-04-05",
-    "dimensions": [
+    "file": "assets/images/diorama-horizon.svg",
+    "role": "Horizon et soleil, calque de fond",
+    "viewBox": [
+      0,
+      0,
       1200,
-      800
+      640
     ],
-    "sha256": "3bbbe6c35a8f4485922a6ca661122fbbac7d7db55ea97b173dbe785d4e3fca23",
-    "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Amphitheater_of_El_Djem.jpg",
-    "sourceUrlWithoutQuery": "https://upload.wikimedia.org/wikipedia/commons/2/27/The_Amphitheater_of_El_Djem.jpg",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-    "adaptation": "Image redimensionnée et convertie en WebP, sans recadrage du fichier."
+    "source": "Dessin vectoriel original TIFA"
+  },
+  {
+    "file": "assets/images/diorama-terrain.svg",
+    "role": "Terrain en relief et bassin",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA"
+  },
+  {
+    "file": "assets/images/diorama-el-jem.svg",
+    "role": "Interprétation originale de l’amphithéâtre d’El Jem",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://whc.unesco.org/fr/list/38/"
+  },
+  {
+    "file": "assets/images/diorama-matmata.svg",
+    "role": "Interprétation originale des habitations troglodytiques de Matmata",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://iris.unirc.it/handle/20.500.12318/20885"
+  },
+  {
+    "file": "assets/images/diorama-taj.svg",
+    "role": "Interprétation originale du Taj Mahal, dérivée du dessin vectoriel TIFA",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://whc.unesco.org/en/list/252/"
   }
 ]
