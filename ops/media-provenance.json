@@ -152,5 +152,21 @@
     "source": "Logo_vec.png fourni par l’utilisateur le 2 octobre 2026",
     "role": "Logo officiel prioritaire",
     "transformations": "Aucune, copie exacte du fichier"
+  },
+  {
+    "file": "assets/images/el-jem.webp",
+    "title": "The Amphitheater of El Djem",
+    "author": "Agnieszka Wolska",
+    "capturedAt": "2009-04-05",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "sha256": "3bbbe6c35a8f4485922a6ca661122fbbac7d7db55ea97b173dbe785d4e3fca23",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Amphitheater_of_El_Djem.jpg",
+    "sourceUrlWithoutQuery": "https://upload.wikimedia.org/wikipedia/commons/2/27/The_Amphitheater_of_El_Djem.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "adaptation": "Image redimensionnée et convertie en WebP, sans recadrage du fichier."
   }
 ]

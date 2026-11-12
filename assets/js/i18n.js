@@ -74,8 +74,7 @@
     options.append(button);
     button.addEventListener('click', () => { apply(code, true); dismiss(true); });
   }
-  document.body.append(panel, trigger);
-  root.classList.add('i18n-ready');
+  document.querySelector('#language-dock').append(trigger, panel);
 
   function apply(next, remember = false) {
     language = next;

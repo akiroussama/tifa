@@ -63,15 +63,19 @@ p { margin: 0; }
 .brand strong { display: block; font-family: var(--display); font-size: 28px; line-height: 1; letter-spacing: .04em; }
 .brand small { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
 #navigation { display: flex; align-items: center; gap: clamp(14px, 1.8vw, 28px); font-size: 14px; font-weight: 500; }
-#navigation > a:not(.nav-contact) { position: relative; padding: 6px 0; }
-#navigation > a:not(.nav-contact)::after { content: ""; position: absolute; left: 50%; right: 50%; bottom: 0; height: 1.5px; background: var(--marigold); transition: left .3s, right .3s; }
-#navigation > a:not(.nav-contact):hover::after { left: 0; right: 0; }
+#navigation > a { position: relative; padding: 6px 0; }
+#navigation > a::after { content: ""; position: absolute; left: 50%; right: 50%; bottom: 0; height: 1.5px; background: var(--marigold); transition: left .3s, right .3s; }
+#navigation > a:hover::after { left: 0; right: 0; }
 .nav-social { display: flex; gap: 8px; padding-left: 8px; border-left: 1px solid rgba(246, 216, 154, .3); }
 .social-dot { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: rgba(252, 246, 234, .7); border: 1px solid rgba(246, 216, 154, .3); transition: color .25s, border-color .25s; }
 .social-dot svg { width: 14px; height: 14px; }
 .social-dot:hover { color: var(--gold-light); border-color: var(--gold-light); }
-.nav-contact { padding: 10px 20px; border-radius: 999px; border: 1px solid var(--gold); color: var(--gold-light); font-weight: 700; transition: background .3s, color .3s; }
-.nav-contact:hover { background: var(--gold); color: var(--night); }
+.header-actions, .document-actions { display: flex; align-items: center; gap: 10px; }
+.header-actions { order: 2; }
+.header #navigation { order: 1; margin-inline-start: auto; }
+.contact-trigger { display: inline-flex; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; gap: 8px; padding: 7px 14px; border: 1px solid var(--gold); border-radius: 999px; color: var(--gold-light); font-size: 14px; font-weight: 700; transition: color .25s, background .25s; }
+.contact-trigger svg { width: 20px; height: 20px; flex: 0 0 20px; }
+.contact-trigger:hover, .contact-trigger:focus-visible { background: var(--gold); color: var(--night); }
 .menu-toggle { display: none; align-items: center; gap: 10px; border: 1px solid rgba(246, 216, 154, .5); background: rgba(18, 10, 44, .4); color: var(--ivory); border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 700; }
 .menu-toggle i { position: relative; width: 18px; height: 2px; background: currentColor; }
 .menu-toggle i::before, .menu-toggle i::after { content: ""; position: absolute; left: 0; width: 18px; height: 2px; background: currentColor; transition: transform .3s; }
@@ -272,6 +276,8 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
 .dialog-body .eyebrow { margin-bottom: 0; }
 .dialog-body h2 { font-size: clamp(32px, 3.6vw, 48px); margin: 14px 0 22px; }
 .dialog-body p { font-size: 15px; margin-bottom: 22px; color: var(--muted); }
+.publication-text { white-space: pre-line; overflow-wrap: anywhere; }
+.dialog-body .publication-language-note { font-size: 12px; margin-bottom: 8px; }
 .dialog-gallery { display: flex; gap: 9px; margin: 25px 0; }
 .dialog-gallery button { padding: 0; border: 0; width: 20%; aspect-ratio: 1.3; background: #e7d4b6; border-radius: 10px; overflow: hidden; }
 .dialog-gallery img { width: 100%; height: 100%; object-fit: cover; }
@@ -316,10 +322,9 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   .menu-toggle { display: inline-flex; }
   #navigation { position: absolute; top: calc(100% + 8px); left: 16px; right: 16px; flex-direction: column; align-items: stretch; gap: 0; padding: 14px 22px 22px; border-radius: 22px; background: rgba(18, 10, 44, .96); backdrop-filter: blur(14px); border: 1px solid rgba(217, 165, 74, .4); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: opacity .3s, transform .3s, visibility .3s; }
   #navigation.is-open { opacity: 1; visibility: visible; transform: none; }
-  #navigation > a:not(.nav-contact) { padding: 13px 0; border-bottom: 1px solid rgba(246, 216, 154, .15); font-size: 17px; }
+  #navigation > a { padding: 13px 0; border-bottom: 1px solid rgba(246, 216, 154, .15); font-size: 17px; }
   .nav-social { border: 0; padding: 18px 0 10px; gap: 12px; }
   .social-dot { width: 40px; height: 40px; }
-  .nav-contact { text-align: center; margin-top: 8px; }
   .mission-grid { grid-template-columns: repeat(2, 1fr); }
   .founders-grid { grid-template-columns: repeat(3, 1fr); }
   footer { grid-template-columns: 1fr 1fr; }
@@ -351,6 +356,10 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   .scene-caption { position: relative; bottom: auto; padding: 0 16px 18px; flex-wrap: wrap; gap: 10px; font-size: 11px; }
   .brand small { display: none; }
   .brand img { width: 44px; height: 44px; }
+  .header { gap: 10px; }
+  .header-actions { gap: 6px; }
+  .contact-trigger { padding: 7px; }
+  .contact-trigger span { display: none; }
   .mission-grid, .founders-grid { grid-template-columns: 1fr; }
   .gallery-grid { gap: 14px; }
   .event-copy { padding: 24px; }
@@ -362,6 +371,13 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   .dialog-gallery button { width: calc(33.3% - 6px); }
   #photo-dialog { padding: 18px; }
   .document-header { flex-direction: column; }
+  .document-actions { justify-content: space-between; }
+}
+@media (max-width: 370px) {
+  .header .menu-toggle { justify-content: center; min-height: 44px; min-width: 44px; padding-inline: 9px; }
+  .header .menu-toggle span { display: none; }
+  .legal-table { table-layout: fixed; }
+  .legal-table :is(th, td) { padding: 10px 9px; overflow-wrap: anywhere; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -388,15 +404,19 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   .cooperation-highlight { grid-template-columns: 1fr; gap: 20px; padding: 30px 26px; margin-top: 40px; }
 }
 
-/* Language picker from ABSFJ: a floating globe and a one-time flag panel. */
+/* The ABSFJ flag panel opens directly below the language button. */
+.language-dock { position: relative; z-index: 2; flex: 0 0 auto; }
+.language-dock:empty { display: none; }
 .language-nudge {
-  position: fixed;
-  z-index: 1600;
-  inset-block-start: clamp(8px, 42vh, calc(100dvh - 282px));
-  inset-inline-end: 14px;
+  position: absolute;
+  z-index: 1;
+  inset-block-start: calc(100% + 10px);
+  inset-inline-end: 0;
   display: grid;
   gap: 10px;
   width: 168px;
+  max-height: calc(100dvh - 120px);
+  overflow: auto;
   padding: 16px 12px 12px;
   color: #292923;
   background: rgba(255, 253, 248, 0.96);
@@ -404,13 +424,12 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   border-radius: 18px;
   box-shadow: 0 12px 36px rgba(28, 30, 25, 0.18);
   opacity: 0;
-  transform: translateX(16px);
+  transform: translateY(-7px);
   transition: opacity 220ms ease, transform 300ms cubic-bezier(.2,.75,.25,1);
   backdrop-filter: blur(14px);
 }
 .language-nudge[hidden] { display: none; }
-.language-nudge.is-visible { opacity: 1; transform: translateX(0); }
-.language-nudge.is-dismissed { display: none; }
+.language-nudge.is-visible { opacity: 1; transform: translateY(0); }
 .language-nudge-label {
   color: #777365;
   font-size: 9px;
@@ -453,9 +472,11 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
 .language-nudge-options button span:last-child { white-space: nowrap; text-align: left; }
 .language-nudge-close {
   position: absolute;
-  inset-block-start: 3px;
-  inset-inline-end: 5px;
-  padding: 0 3px;
+  inset-block-start: 1px;
+  inset-inline-end: 3px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
   color: #777365;
   font-size: 16px;
   line-height: 1;
@@ -464,10 +485,6 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
   cursor: pointer;
 }
 .language-trigger {
-  position: fixed;
-  z-index: 1601;
-  inset-block-end: 20px;
-  inset-inline-end: 18px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -485,22 +502,14 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
 }
 .language-trigger span:first-child { font-size: 17px; }
 .language-trigger:hover { background: #f4eee1; }
-@media (max-width: 640px) {
-  .language-nudge { inset-block-start: clamp(8px, 38vh, calc(100dvh - 282px)); inset-inline-end: 8px; width: 168px; }
-  .language-trigger { inset-block-end: 14px; inset-inline-end: 12px; }
-}
 @media (prefers-reduced-motion: reduce) {
   .language-nudge, .language-nudge-options button { transition: none; }
 }
 
-.language-nudge:dir(rtl) { transform: translateX(-16px); }
-.language-nudge:dir(rtl).is-visible { transform: translateX(0); }
 html[lang="ar"] .language-nudge-label { font-size: 13px; }
 html[lang="hi"] .language-nudge-label { font-size: 11px; }
 .language-nudge-options [lang="ar"] span { font: 700 17px/1.2 Amiri, serif; }
 .language-nudge-options [lang="hi"] span { font: 400 15px/1.2 "Tiro Devanagari Hindi", serif; }
-.i18n-ready .scene-caption { padding-inline-end: max(98px, 6vw); }
-.i18n-ready .skip-link:focus { z-index: 1602; }
 
 html[lang="ar"] { --display: Amiri, serif; --body: Amiri, serif; }
 html[lang="hi"] { --display: "Tiro Devanagari Hindi", serif; --body: "Tiro Devanagari Hindi", serif; }
@@ -523,7 +532,4 @@ html[dir="rtl"] a:is([href^="mailto:"], [href^="tel:"]) { unicode-bidi: isolate;
 }
 @media (max-width: 1180px) {
   html[dir="rtl"] .nav-social { border: 0; padding: 18px 0 10px; }
-}
-@media (max-width: 700px) {
-  .i18n-ready .scene-caption { padding-bottom: 24px; }
 }

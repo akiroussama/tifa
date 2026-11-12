@@ -1,6 +1,6 @@
 # TIFA — Association d’Amitié Tuniso-Indienne
 
-Site statique créé pour TIFA. HTML, CSS et JavaScript natifs, sans installation, framework, service de collecte ni compilation.
+Site TIFA en HTML, CSS et JavaScript natifs. Les pages publiques restent consultables sans l’API. Le bureau de publication utilise trois fonctions Vercel et un stockage Blob dédié.
 
 ## Voir le site
 
@@ -10,23 +10,20 @@ Depuis `C:\workspace\tifa` :
 python -m http.server 4175 --bind 127.0.0.1
 ```
 
-Ouvrir `http://127.0.0.1:4175/`. Un serveur HTTP est nécessaire pour charger le module 3D ; l’ouverture directe du fichier conserve l’illustration de repli.
+Ouvrir `http://127.0.0.1:4175/`. Ce serveur ne fournit que les pages et les contenus de référence. Pour tester aussi l’édition et la publication, voir [le guide du bureau](ops/BUREAU-TIFA.md).
 
 ## Importer dans Vercel
 
-Le déploiement est pris en charge par Oussama.
+1. Utiliser le projet Vercel TIFA lié au dépôt `akiroussama/tifa`, preset **Other**, racine du dépôt. Le `vercel.json` définit `npm run build`, la sortie `public` et les fonctions d’édition. Retirer toute surcharge du tableau de bord qui imposerait l’ancienne sortie `.`.
+2. Configurer le stockage dédié à TIFA et les quatre variables serveur décrites dans le [guide du bureau](ops/BUREAU-TIFA.md), sans copier les secrets de stockage ou de session ABSFJ.
+3. Déployer, puis vérifier les trois pages publiques et `/bureau-publications`, ainsi que la connexion réelle, le fil des rencontres et la version mobile.
+4. Compléter le responsable de publication et les coordonnées d’hébergement dans `mentions-legales.html` avec les informations validées par l’association.
 
-1. Importer le dépôt `akiroussama/tifa` dans le compte Vercel souhaité.
-2. Choisir le preset **Other**, racine du dépôt.
-3. Laisser les commandes d’installation et de compilation vides et utiliser la racine comme dossier de sortie (`.`).
-4. Déployer, puis contrôler les trois pages, les neuf photos, le logo, les filtres, les fiches et la version mobile.
-5. Compléter le responsable de publication et les coordonnées de l’hébergement dans `mentions-legales.html`, puis renseigner les URL absolues de partage/canonical quand le domaine final est connu.
-
-`vercel.json` configure les en-têtes. `.vercelignore` exclut les notes de travail et les scripts de l’artefact livré.
+La compilation ne copie que les quatre pages et `assets/` dans `public/`. L’API est déployée séparément. `.vercelignore` exclut les fichiers `.env`, notes, scripts de test et résultats locaux.
 
 ## Direction visuelle
 
-**« Nuit d’Agra »** : le Taj Mahal au crépuscule, en illustration fixe et fidèle vue depuis le bassin, sous un ciel indigo-safran, devant une lune et un mandala doré immobile. Seuls quelques pétales de souci et des étincelles bougent discrètement.
+**El Jem et le Taj Mahal** : l’accueil place côte à côte une photographie de l’amphithéâtre tunisien et l’illustration du Taj Mahal. La Tunisie précède l’Inde dans les drapeaux, le titre et les visuels, dans les quatre langues. La palette indigo et or, le mandala et les pétales reprennent la direction « Nuit d’Agra ».
 
 Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur fond sombre), l’énergie colorée d’Optimist India, les jali moghols et les palais du Rajasthan (arches polylobées, treillis à étoiles à huit branches, palette indigo, safran, souci, or et ivoire).
 
@@ -38,6 +35,8 @@ Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur f
 Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. Les pétales et étincelles du hero sont dans `assets/js/hero-fx.js` ; ils s’arrêtent avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
 
 Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal du hero est une illustration fixe (`assets/images/taj-mahal.svg`), sans animation, générée par `scripts/build_taj.py` à partir des proportions de l’élévation réelle (plinthe de 95 m, mausolée de 57 m, dôme et épi vers 73 m, minarets d’environ 42 m), vue depuis le bassin de réflexion. Ce n’est ni une photographie ni un relevé patrimonial exact. Aucun portrait ni événement d’ABSFJ n’est repris.
+
+La [photographie d’El Jem](https://commons.wikimedia.org/wiki/File:The_Amphitheater_of_El_Djem.jpg) est d’Agnieszka Wolska, sous [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Elle a été redimensionnée et convertie en WebP. Le crédit public figure sur la page des sources.
 
 ## Mettre à jour les contenus
 
@@ -51,7 +50,7 @@ Pour ajouter une rencontre, suivre la structure d’une fiche dans `content.js`.
 
 ## Langues
 
-Le bouton flottant reprend le sélecteur d’ABSFJ. Il propose le français, l’anglais, l’arabe et le hindi. Le choix est conservé localement et dans le paramètre `?lang=` des liens entre pages. L’arabe est affiché de droite à gauche ; les citations originales et les références restent dans leur langue et leur sens de lecture.
+Le bouton de langue se trouve en haut de page, à côté de l’icône de contact sur l’accueil. Le volet à drapeaux reprend le sélecteur d’ABSFJ et propose le français, l’anglais, l’arabe et le hindi. Le choix est conservé localement et dans le paramètre `?lang=` des liens entre pages. L’arabe est affiché de droite à gauche ; les citations originales et les références restent dans leur langue et leur sens de lecture.
 
 Le français reste la source dans les pages HTML et `assets/js/content.js`. Pour chaque mise à jour, lancer `python -X utf8 scripts/i18n_inventory.py` afin de lister les textes à reporter dans `assets/js/i18n/{en,ar,hi}.js`. Traduire les six champs publics de toute nouvelle fiche sous son identifiant ; ses dates techniques, URLs, médias et extraits originaux restent communs aux quatre langues. Le contrôle `python -X utf8 scripts/validate_i18n.py` détecte les textes manquants et les variables oubliées.
 
@@ -71,6 +70,8 @@ Le nom `Constitution d’une Association` du document reçu désigne une annonce
 node --check assets/js/content.js
 node --check assets/js/main.js
 node --check assets/js/hero-fx.js
+npm test
+npm run build
 python scripts/validate_site.py
 python -X utf8 scripts/validate_i18n.py
 ```
