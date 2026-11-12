@@ -49,6 +49,12 @@ Le logo fourni `Logo_vec.png` est copié à l’identique. Le Taj Mahal du hero 
 
 Pour ajouter une rencontre, suivre la structure d’une fiche dans `content.js`. Préserver les identifiants, les dates de l’événement séparées des dates de publication et le lien source. Une fiche sans photo s’affiche en texte. La galerie est dérivée des mêmes données pour éviter les décalages.
 
+## Langues
+
+Le bouton flottant reprend le sélecteur d’ABSFJ. Il propose le français, l’anglais, l’arabe et le hindi. Le choix est conservé localement et dans le paramètre `?lang=` des liens entre pages. L’arabe est affiché de droite à gauche ; les citations originales et les références restent dans leur langue et leur sens de lecture.
+
+Le français reste la source dans les pages HTML et `assets/js/content.js`. Pour chaque mise à jour, lancer `python -X utf8 scripts/i18n_inventory.py` afin de lister les textes à reporter dans `assets/js/i18n/{en,ar,hi}.js`. Traduire les six champs publics de toute nouvelle fiche sous son identifiant ; ses dates techniques, URLs, médias et extraits originaux restent communs aux quatre langues. Le contrôle `python -X utf8 scripts/validate_i18n.py` détecte les textes manquants et les variables oubliées.
+
 ## État du contenu
 
 Version enrichie : seize fiches documentées, dont douze issues du rapport d’activités TIFA 2024–2026 ; deux publications Facebook avec neuf photographies ; deux comptes rendus de l’ambassade, dont la fiche Diwali complétée par le rapport ; cinq fondateurs publiés au JORT. Les quatre rencontres les plus récentes apparaissent d’abord ; le bouton d’archives donne accès aux seize fiches et les filtres affichent toutes les rencontres de leur catégorie.
@@ -66,6 +72,7 @@ node --check assets/js/content.js
 node --check assets/js/main.js
 node --check assets/js/hero-fx.js
 python scripts/validate_site.py
+python -X utf8 scripts/validate_i18n.py
 ```
 
 La vérification visuelle se fait dans le navigateur sur bureau et mobile. Les dialogues natifs assurent le parcours clavier ; les filtres ont un état accessible. Les pétales et étincelles du hero disposent d’une pause réelle, respectent la préférence de réduction des mouvements et s’arrêtent dans les onglets masqués et hors écran.
