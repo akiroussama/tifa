@@ -387,3 +387,143 @@ dialog::backdrop { background: rgba(18, 10, 44, .82); backdrop-filter: blur(8px)
 @media (max-width: 900px) {
   .cooperation-highlight { grid-template-columns: 1fr; gap: 20px; padding: 30px 26px; margin-top: 40px; }
 }
+
+/* Language picker from ABSFJ: a floating globe and a one-time flag panel. */
+.language-nudge {
+  position: fixed;
+  z-index: 1600;
+  inset-block-start: clamp(8px, 42vh, calc(100dvh - 282px));
+  inset-inline-end: 14px;
+  display: grid;
+  gap: 10px;
+  width: 168px;
+  padding: 16px 12px 12px;
+  color: #292923;
+  background: rgba(255, 253, 248, 0.96);
+  border: 1px solid rgba(143, 118, 70, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(28, 30, 25, 0.18);
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 220ms ease, transform 300ms cubic-bezier(.2,.75,.25,1);
+  backdrop-filter: blur(14px);
+}
+.language-nudge[hidden] { display: none; }
+.language-nudge.is-visible { opacity: 1; transform: translateX(0); }
+.language-nudge.is-dismissed { display: none; }
+.language-nudge-label {
+  color: #777365;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: .05em;
+}
+.language-nudge-options { display: grid; gap: 5px; direction: ltr; }
+.language-nudge-options button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-height: 42px;
+  padding: 6px 10px;
+  color: inherit;
+  font: 700 12px/1.2 "DM Sans", system-ui, sans-serif;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+.language-nudge-options button:hover,
+.language-nudge-options button[aria-pressed="true"] {
+  background: #f4eee1;
+  border-color: rgba(143, 118, 70, 0.22);
+}
+.language-nudge-options button:hover { transform: translateX(-2px); }
+.language-nudge-options button .language-flag {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 34, 32, .16);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .08);
+}
+.language-nudge-options button span:last-child { white-space: nowrap; text-align: left; }
+.language-nudge-close {
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-end: 5px;
+  padding: 0 3px;
+  color: #777365;
+  font-size: 16px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.language-trigger {
+  position: fixed;
+  z-index: 1601;
+  inset-block-end: 20px;
+  inset-inline-end: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 54px;
+  min-height: 44px;
+  padding: 8px 12px;
+  color: #292923;
+  font: 800 11px/1 "DM Sans", system-ui, sans-serif;
+  background: rgba(255, 253, 248, .96);
+  border: 1px solid rgba(143, 118, 70, .32);
+  border-radius: 24px;
+  box-shadow: 0 5px 18px rgba(28, 30, 25, .15);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+.language-trigger span:first-child { font-size: 17px; }
+.language-trigger:hover { background: #f4eee1; }
+@media (max-width: 640px) {
+  .language-nudge { inset-block-start: clamp(8px, 38vh, calc(100dvh - 282px)); inset-inline-end: 8px; width: 168px; }
+  .language-trigger { inset-block-end: 14px; inset-inline-end: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .language-nudge, .language-nudge-options button { transition: none; }
+}
+
+.language-nudge:dir(rtl) { transform: translateX(-16px); }
+.language-nudge:dir(rtl).is-visible { transform: translateX(0); }
+html[lang="ar"] .language-nudge-label { font-size: 13px; }
+html[lang="hi"] .language-nudge-label { font-size: 11px; }
+.language-nudge-options [lang="ar"] span { font: 700 17px/1.2 Amiri, serif; }
+.language-nudge-options [lang="hi"] span { font: 400 15px/1.2 "Tiro Devanagari Hindi", serif; }
+.i18n-ready .scene-caption { padding-inline-end: max(98px, 6vw); }
+.i18n-ready .skip-link:focus { z-index: 1602; }
+
+html[lang="ar"] { --display: Amiri, serif; --body: Amiri, serif; }
+html[lang="hi"] { --display: "Tiro Devanagari Hindi", serif; --body: "Tiro Devanagari Hindi", serif; }
+html:is([lang="ar"], [lang="hi"]) :is(h1, h2, h3) { line-height: 1.22; letter-spacing: 0; }
+html:is([lang="ar"], [lang="hi"]) .hero h1 { font-size: clamp(38px, 5.4vw, 84px); line-height: 1.2; }
+html:is([lang="ar"], [lang="hi"]) :is(.eyebrow, .hero-eyebrow, .event-meta, .brand small, .scene-caption) { letter-spacing: 0; }
+html:is([lang="ar"], [lang="hi"]) .brand strong { font-family: "Cormorant Garamond", Georgia, serif; }
+html[dir="rtl"] :is(.legal-table th, .legal-table td, footer) { text-align: start; }
+html[dir="rtl"] :is(.dialog-close, .image-arrow, .gallery-photo span) { right: auto; left: 16px; }
+html[dir="rtl"] .nav-social { padding-left: 0; padding-inline-start: 8px; border-left: 0; border-inline-start: 1px solid rgba(246, 216, 154, .3); }
+html[dir="rtl"] :is(.photo-controls button, .button svg, .social-cta svg) { transform: scaleX(-1); }
+html[dir="rtl"] .dialog-body .original-text { text-align: left; font-family: "DM Sans", sans-serif; }
+html[dir="rtl"] .report-excerpts:dir(rtl) { padding-left: 0; padding-inline-start: 23px; }
+html[dir="rtl"] a:is([href^="mailto:"], [href^="tel:"]) { unicode-bidi: isolate; }
+@media (min-width: 1101px) {
+  html[dir="rtl"] .hero { --sky-x: 29%; }
+  html[dir="rtl"] .taj-stage { left: 0; right: 44%; }
+  html[dir="rtl"] .hero-content { padding: 150px clamp(32px, 6vw, 110px) 80px 0; text-align: right; }
+  html[dir="rtl"] .hero-description { margin-right: 0; margin-left: auto; }
+}
+@media (max-width: 1180px) {
+  html[dir="rtl"] .nav-social { border: 0; padding: 18px 0 10px; }
+}
+@media (max-width: 700px) {
+  .i18n-ready .scene-caption { padding-bottom: 24px; }
+}

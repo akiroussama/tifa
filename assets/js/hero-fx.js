@@ -70,12 +70,20 @@
     if (!toggle) return;
     const paused = toggle.getAttribute('aria-pressed') === 'true';
     toggle.disabled = reduced.matches;
-    toggle.innerHTML = reduced.matches ? 'Animation réduite' : paused ? 'Reprendre l’animation <span aria-hidden="true">▷</span>' : 'Pause de l’animation <span aria-hidden="true">Ⅱ</span>';
+    const t = window.TIFA_I18N.t;
+    toggle.textContent = t(reduced.matches ? 'Animation réduite' : paused ? 'Reprendre l’animation' : 'Pause de l’animation');
+    if (!reduced.matches) {
+      const icon = document.createElement('span');
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = paused ? '▷' : 'Ⅱ';
+      toggle.append(' ', icon);
+    }
   }
   if (toggle) {
     toggle.hidden = false;
     toggle.addEventListener('click', () => { toggle.setAttribute('aria-pressed', String(toggle.getAttribute('aria-pressed') !== 'true')); syncToggle(); start(); });
     reduced.addEventListener('change', syncToggle);
+    window.addEventListener('tifa:languagechange', syncToggle);
     syncToggle();
   }
   resize(); start();

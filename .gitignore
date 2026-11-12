@@ -6,3 +6,4 @@ ops/qa/
 .env.*
 !.env.example
 node_modules/
+__pycache__/
