@@ -305,92 +305,91 @@
  <g fill="#bf8b4c"><circle cy="-12" r=".8"/><circle cx="10" cy="-10" r=".8"/></g>
 </g>
 </defs>
+<!-- Scale the foreground around its lower-left anchor; both the land and animated palms share this transform. -->
+<g id="os-oasis" transform="translate(14 58.5) scale(.9)">
+<g id="os-land">
+
 <!-- The sand shelf is part of the same floating landform as the monuments. -->
 <ellipse cx="370" cy="580" rx="271" ry="24" fill="url(#os-shadow)"/>
 <path d="M105 532Q111 501 167 478q60-25 126-13 54 5 112-8 77-20 135 3 40 14 65 37 15 15 42 29 31 16 18 37-18 29-94 36-78 7-165-3-91-4-158-1-109 0-138-31-13-13-5-32Z" fill="url(#os-edge)"/>
 <path d="M105 529Q118 498 167 477q60-25 126-13 54 5 112-8 77-20 135 3 40 14 65 37 15 15 42 29 31 16 18 32-20 25-94 31-78 7-165-2-91-5-158-1-109-1-138-28-13-11-5-28Z" fill="url(#os-sand)"/>
 <path d="M115 529q23-32 65-46 50-18 109-10M412 464q75-17 121 0m-389 94q48 18 127 15m190 4q106 9 159-13" fill="none" stroke="#ffe3ad" stroke-width="2" opacity=".58" stroke-linecap="round"/>
-<!-- A cool, luxuriant spring garden gathers along the date grove. -->
-<path d="M132 518q0-27 42-40 42-16 95 0 35 10 87-3 68-24 134-10 66 5 104 40 43 11 48 32 10 28-44 40-58 15-143 4-44-14-85-12-31 4-66 4-63 11-111-1-56-11-61-31Z" fill="url(#os-garden)"/>
-<path d="M391 483q51-19 100-6 43 7 79 25 24 20 59 27-42-4-80-18-42-13-85-16-36-6-73-12Z" fill="#b4bc78" opacity=".5"/>
-<path d="M147 525q41-34 96-31 33 0 63 11 30 5 67-10 43-11 70 5 36 15 44 35-2 23-51 32-51 3-89-7-38-9-74 2-60 15-106-8-23-11-20-29Z" fill="#d5bd88"/>
-<path d="M156 526q37-30 86-27 33 0 61 11 34 6 73-10 38-10 64 5 29 13 37 29-2 19-44 26-48 3-85-7-39-9-78 3-54 13-95-7-22-9-19-23Z" fill="url(#os-water)"/>
-<!-- Sunlit shallows follow the organic bank; a narrow rill feeds the grove. -->
-<path d="M158 531q18 22 68 22 30 1 62-9 30-7 61 2 58 13 96 4 23-4 31-15" fill="none" stroke="#c9e4bd" stroke-width="2.6" opacity=".7"/>
-<path d="M190 521q31-14 59-12m21 4 29 9m-85 15q30 5 57-3m65 3q43 14 78 9m-54-25q29-11 54 0m-2 13q23 4 39-3m-124-1 13 1" fill="none" stroke="#d5efcc" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
-<path d="M468 533q24 9 39 24l-5 3q-17-16-39-21Z" fill="#cabd85"/><path d="M468 535q24 10 36 23" fill="none" stroke="#78b6a0" stroke-width="3"/>
-<!-- Two planted islets keep the smaller palms rooted in soil above the spring. -->
-<path d="M239 520q3-9 20-11 17-1 27 7 7 6-7 11-24 6-40-7Z" fill="#e2ca97"/>
-<path d="M243 518q6-7 19-6 14-1 20 5 4 5-9 7-18 3-30-6Z" fill="url(#os-garden)"/>
-<use href="#os-grass" transform="translate(248 520) scale(.28)"/>
-<path d="M360 538q5-10 26-11 19 0 28 7 8 7-11 11-27 6-43-7Z" fill="#e2ca97"/>
-<path d="M365 536q6-7 22-6 16-1 23 5 4 4-11 7-21 3-34-6Z" fill="url(#os-garden)"/>
-<use href="#os-grass" transform="translate(399 538) scale(.29)"/>
-<!-- Light gravel path winds gently through the palms. -->
-<path d="M598 562q-25-20-52-30-25-9-25-23-2-12 15-24" fill="none" stroke="#dcbf87" stroke-width="10" stroke-linecap="round"/>
-<path d="M598 562q-25-20-52-30-25-9-25-23-2-12 15-24" fill="none" stroke="#f1d7a0" stroke-width="2" opacity=".6"/>
 
-<use href="#os-shrub-clump" transform="translate(145 507) scale(0.7)"/>
-<use href="#os-shrub-clump" transform="translate(171 493) scale(0.7)"/>
-<use href="#os-shrub-clump" transform="translate(213 487) scale(0.67)"/>
-<use href="#os-shrub-clump" transform="translate(250 489) scale(0.6)"/>
-<use href="#os-shrub-clump" transform="translate(282 494) scale(0.5)"/>
-<use href="#os-shrub-clump" transform="translate(321 497) scale(0.44)"/>
-<use href="#os-shrub-clump" transform="translate(361 488) scale(0.5)"/>
-<use href="#os-shrub-clump" transform="translate(397 484) scale(0.67)"/>
-<use href="#os-shrub-clump" transform="translate(433 483) scale(0.7)"/>
-<use href="#os-shrub-clump" transform="translate(475 479) scale(0.65)"/>
-<use href="#os-shrub-clump" transform="translate(507 486) scale(0.7)"/>
-<use href="#os-shrub-clump" transform="translate(551 495) scale(0.75)"/>
-<use href="#os-shrub-clump" transform="translate(584 517) scale(0.7)"/>
-<use href="#os-shrub-clump" transform="translate(617 536) scale(0.66)"/>
-<use href="#os-shrub-clump" transform="translate(626 551) scale(0.6)"/>
-<use href="#os-shrub-clump" transform="translate(584 570) scale(0.74)"/>
-<use href="#os-shrub-clump" transform="translate(545 573) scale(0.68)"/>
-<use href="#os-shrub-clump" transform="translate(513 569) scale(0.62)"/>
-<use href="#os-shrub-clump" transform="translate(468 570) scale(0.56)"/>
-<use href="#os-shrub-clump" transform="translate(426 576) scale(0.5)"/>
-<use href="#os-shrub-clump" transform="translate(382 570) scale(0.57)"/>
-<use href="#os-shrub-clump" transform="translate(333 565) scale(0.56)"/>
-<use href="#os-shrub-clump" transform="translate(291 570) scale(0.55)"/>
-<use href="#os-shrub-clump" transform="translate(248 575) scale(0.63)"/>
-<use href="#os-shrub-clump" transform="translate(209 572) scale(0.62)"/>
-<use href="#os-shrub-clump" transform="translate(172 561) scale(0.69)"/>
-<use href="#os-shrub-clump" transform="translate(145 545) scale(0.59)"/>
-<!-- Ten fruit-bearing date palms create depth without hiding the monuments. -->
+<!-- Irregular damp ground and wild undergrowth gather around a small Saharan spring. -->
+<path d="M143 512q4-19 25-28l21 4 17-7q27-7 49 6l24 2 14 10q31-7 53-19l30 3 20-13q34-8 58 1l25-7q22 3 31 14l25-3q31 9 48 27l-2 11 20 5 9 15 20 4-4 14q9 8-1 15l-23 3-13 9-22-5-24 9-26-7-18 7-30-5-15 6-28-10-23 2-23-6-19 7-33-2-18 7-28-7-22 5-24-8-19 3q-24-7-34-18l2-16-13-6 7-17Z" fill="url(#os-garden)"/>
+<path d="M143 541q37 8 61 3l20 6q-28 12-54 4Zm211-50q36-14 54-12l-11 7-23-1Zm143-8q41 4 66 26-26-10-53-13Z" fill="#b9bc7f" opacity=".5"/>
+<path d="M294 489q12 12 27 17l-10 3q-16-7-31-19ZM459 547q26 3 49 17l-4 6q-30-17-51-16ZM172 525q-21 3-31 9l-7-8q12-5 31-7Z" fill="#c8ac78" opacity=".74"/>
+<!-- A smaller lake with uneven banks, rock shelves and reeds instead of a landscaped pool rim. -->
+<g id="os-spring" transform="translate(-75.84 -127.2) scale(1.24)">
+<path d="M201 527q7-14 27-17l19-5q17-4 31 3l17 6q12 3 26-3l18-6q18-7 38 0l17 5q20 1 27 12l13 7-5 12q-12 8-31 8l-18-1q-18 2-35-3l-19-4q-16-3-31 3l-23 8q-24 6-47-2l-14-1q-15-4-21-14Z" fill="#476a52"/>
+<path id="os-lake" d="M207 528q6-11 24-14l19-5q15-3 26 3l17 6q14 4 30-3l18-6q17-5 34 1l18 5q17 0 23 10l10 5-3 8q-10 7-26 7l-18-1q-18 2-33-3l-19-4q-18-4-35 3l-22 7q-22 6-41-1l-13-1q-14-3-19-12Z" fill="url(#os-water)"/>
+<path d="M218 538q8 6 22 6m31 0 18-6m95 4q19 2 29-5M212 524l14-7m117-5 13-2" fill="none" stroke="#d1d7b3" stroke-width="1.9" opacity=".7" stroke-linecap="round"/>
+<path d="M234 527q19-5 34-2m17 8 19-3m32-7q18-3 34 2m-57 8q15 1 24 3m39-4 18-1" fill="none" stroke="#d5efcc" stroke-width="1.15" opacity=".66" stroke-linecap="round"/>
+</g>
+<!-- Plants grow in informal clusters; open sand connects the oasis to the desert. -->
+
+<use href="#os-shrub-clump" transform="translate(157 500) scale(0.62)"/>
+<use href="#os-shrub-clump" transform="translate(178 494) scale(0.57)"/>
+<use href="#os-shrub-clump" transform="translate(196 501) scale(0.44)"/>
+<use href="#os-shrub-clump" transform="translate(239 492) scale(0.55)"/>
+<use href="#os-shrub-clump" transform="translate(320 491) scale(0.43)"/>
+<use href="#os-shrub-clump" transform="translate(358 483) scale(0.6)"/>
+<use href="#os-shrub-clump" transform="translate(383 486) scale(0.46)"/>
+<use href="#os-shrub-clump" transform="translate(454 480) scale(0.66)"/>
+<use href="#os-shrub-clump" transform="translate(476 487) scale(0.53)"/>
+<use href="#os-shrub-clump" transform="translate(555 502) scale(0.66)"/>
+<use href="#os-shrub-clump" transform="translate(580 510) scale(0.52)"/>
+<use href="#os-shrub-clump" transform="translate(610 539) scale(0.59)"/>
+<use href="#os-shrub-clump" transform="translate(592 555) scale(0.66)"/>
+<use href="#os-shrub-clump" transform="translate(570 561) scale(0.48)"/>
+<use href="#os-shrub-clump" transform="translate(494 567) scale(0.6)"/>
+<use href="#os-shrub-clump" transform="translate(474 563) scale(0.47)"/>
+<use href="#os-shrub-clump" transform="translate(421 568) scale(0.58)"/>
+<use href="#os-shrub-clump" transform="translate(302 567) scale(0.43)"/>
+<use href="#os-shrub-clump" transform="translate(272 569) scale(0.55)"/>
+<use href="#os-shrub-clump" transform="translate(175 548) scale(0.59)"/>
+<use href="#os-shrub-clump" transform="translate(154 546) scale(0.4)"/>
+<use href="#os-grass" transform="translate(438 521) scale(0.6)"/>
+<use href="#os-grass" transform="translate(470 536) scale(0.62)"/>
+<use href="#os-grass" transform="translate(562 541) scale(0.63)"/>
+<use href="#os-grass" transform="translate(598 545) scale(0.55)"/>
+<use href="#os-grass" transform="translate(535 558) scale(0.5)"/>
+<use href="#os-grass" transform="translate(417 551) scale(0.46)"/>
+<use href="#os-grass" transform="translate(355 562) scale(0.46)"/>
+<use href="#os-grass" transform="translate(205 550) scale(0.5)"/>
+<use href="#os-grass" transform="translate(214 515) scale(0.5)"/>
+<use href="#os-grass" transform="translate(279 510) scale(0.38)"/>
+<use href="#os-grass" transform="translate(352 508) scale(0.42)"/>
+<use href="#os-grass" transform="translate(391 515) scale(0.4)"/>
+<use href="#os-grass" transform="translate(143 530) scale(0.46)"/>
+<use href="#os-grass" transform="translate(289 491) scale(0.5)"/>
+<use href="#os-grass" transform="translate(521 510) scale(0.58)"/>
+<use href="#os-grass" transform="translate(581 527) scale(0.36)"/>
+<use href="#os-grass" transform="translate(611 529) scale(0.42)"/>
+<use href="#os-flowers" transform="translate(458 551) scale(0.55)"/>
+<use href="#os-flowers" transform="translate(575 552) scale(0.48)"/>
+<use href="#os-flowers" transform="translate(303 568) scale(0.43)"/>
+<use href="#os-flowers" transform="translate(184 553) scale(0.4)"/>
+<!-- Broken rock outcrops and sunlit sand avoid a regular garden border. -->
+<g fill="#e8c18a" stroke="#ac805d" stroke-width=".7">
+ <path d="m122 548 7-5 9 1 4 6-11 4Z"/><path d="m231 582 9-4 11 3-2 5-13 1Z"/>
+ <path d="m625 565 10-6 13 3 3 6-15 4Z"/><path d="m639 540 7-3 10 3-1 5-12 2Z"/>
+ <path d="m502 579 8-4 10 2 2 4-11 3Z"/><path d="m186 521 9-7 12 2 2 4-13 5Z"/>
+ <path d="m446 552 8-3 12 1 3 4-15 2Z"/><path d="m442 558 4-2 7 2-4 3Z"/>
+</g>
+<path d="M120 558q21 12 48 14m240 10 32 3m112-1q37-1 57-9" fill="none" stroke="#f8dba8" stroke-width="1.3" opacity=".7" stroke-linecap="round"/>
+</g>
+<!-- Reusable palm instances stay separate from the land for page-level wind animation. -->
+
 <use href="#os-palm" transform="translate(503 368) scale(0.94)"/>
 <use href="#os-palm" transform="translate(563 391) scale(0.82)"/>
 <use href="#os-palm" transform="translate(609 430) scale(0.62)"/>
 <use href="#os-palm" transform="translate(445 411) scale(0.66)"/>
 <use href="#os-palm" transform="translate(190 429) scale(0.6)"/>
 <use href="#os-palm" transform="translate(139 462) scale(0.47)"/>
-<use href="#os-palm" transform="translate(259 459) scale(0.45)"/>
-<use href="#os-palm" transform="translate(384 461) scale(0.57)"/>
+<use href="#os-palm" transform="translate(253 439) scale(0.45)"/>
+<use href="#os-palm" transform="translate(406 493) scale(0.57)"/>
 <use href="#os-palm" transform="translate(480 471) scale(0.6)"/>
 <use href="#os-palm" transform="translate(551 487) scale(0.54)"/>
-<use href="#os-grass" transform="translate(457 526) scale(0.72)"/>
-<use href="#os-grass" transform="translate(489 540) scale(0.62)"/>
-<use href="#os-grass" transform="translate(563 542) scale(0.63)"/>
-<use href="#os-grass" transform="translate(598 545) scale(0.55)"/>
-<use href="#os-grass" transform="translate(535 558) scale(0.5)"/>
-<use href="#os-grass" transform="translate(418 554) scale(0.44)"/>
-<use href="#os-grass" transform="translate(354 565) scale(0.43)"/>
-<use href="#os-grass" transform="translate(205 558) scale(0.38)"/>
-<use href="#os-grass" transform="translate(143 530) scale(0.46)"/>
-<use href="#os-grass" transform="translate(288 501) scale(0.38)"/>
-<use href="#os-grass" transform="translate(355 492) scale(0.43)"/>
-<use href="#os-grass" transform="translate(611 529) scale(0.42)"/>
-<use href="#os-flowers" transform="translate(455 555) scale(0.72)"/>
-<use href="#os-flowers" transform="translate(582 555) scale(0.73)"/>
-<use href="#os-flowers" transform="translate(515 569) scale(0.65)"/>
-<use href="#os-flowers" transform="translate(184 555) scale(0.6)"/>
-<use href="#os-flowers" transform="translate(312 565) scale(0.55)"/>
-<use href="#os-flowers" transform="translate(367 491) scale(0.45)"/>
-<!-- Warm rocks and sand remain visible around the garden island. -->
-<g fill="#e8c18a" stroke="#ac805d" stroke-width=".7">
- <path d="m122 548 7-5 9 1 4 6-11 4Z"/><path d="m231 582 9-4 11 3-2 5-13 1Z"/>
- <path d="m625 565 10-6 13 3 3 6-15 4Z"/><path d="m639 540 7-3 10 3-1 5-12 2Z"/>
- <path d="m502 579 8-4 10 2 2 4-11 3Z"/>
 </g>
-<path d="M120 558q21 12 48 14m240 10 32 3m112-1q37-1 57-9" fill="none" stroke="#f8dba8" stroke-width="1.3" opacity=".7" stroke-linecap="round"/>
 </svg>

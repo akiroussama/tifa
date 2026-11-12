@@ -188,8 +188,16 @@
     "referencePage": "https://whc.unesco.org/fr/list/38/"
   },
   {
+    "file": "assets/images/diorama-kairouan.svg",
+    "role": "Interprétation originale de la mosquée Oqba Ibn Nafi de Kairouan en arrière-plan d’El Jem",
+    "viewBox": [0, 0, 1200, 640],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://www.patrimoinedetunisie.com.tn/en/monuments/the-great-mosque-of-kairouan/overview/",
+    "additionalReference": "https://whc.unesco.org/fr/list/499/"
+  },
+  {
     "file": "assets/images/diorama-oasis.svg",
-    "role": "Oasis luxuriante du Sud tunisien, palmeraie de dattiers avec grappes de dattes, source turquoise et rives fleuries",
+    "role": "Oasis du Sud tunisien, palmeraie de dattiers avec grappes de dattes et petit lac naturel",
     "viewBox": [
       0,
       0,

@@ -1,4 +1,4 @@
-/* Five illustrations, one landscape: CSS depth, as on the ABSFJ home page. */
+/* One landscape: CSS depth, as on the ABSFJ home page. */
 .hero.hero-diorama {
   --sky-x: 50%; --sky-y: 68%;
   display: block;
@@ -55,6 +55,7 @@ html:is([lang="ar"], [lang="hi"]) .hero-diorama :is(h1 span, .hero-country span)
 .scene-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; transform: translateZ(calc(var(--z) * var(--scene-depth))); }
 .scene-horizon { --z: -55px; }
 .scene-terrain { --z: -15px; }
+.scene-kairouan { --z: -3px; }
 .scene-taj { --z: 1px; }
 .scene-el-jem { --z: 27px; }
 .scene-oasis { --z: 48px; }
@@ -63,6 +64,20 @@ html:is([lang="ar"], [lang="hi"]) .hero-diorama :is(h1 span, .hero-country span)
 .tifa-diorama[data-motion="paused"] .diorama-float { animation: diorama-hover 7s ease-in-out infinite alternate; animation-play-state: paused; }
 .hero-diorama:has(.tifa-diorama[data-motion="paused"]) :is(.stars, h1 span) { animation-play-state: paused; }
 @keyframes diorama-hover { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+.palm-sway {
+  transform-box: view-box;
+  transform-origin: 0px 133px;
+  animation: palm-breeze var(--breeze-duration, 6s) ease-in-out var(--breeze-delay, 0s) infinite alternate;
+  animation-play-state: paused;
+}
+.tifa-diorama[data-motion="running"] .palm-sway { animation-play-state: running; }
+.palm-tree:nth-of-type(3n + 1) .palm-sway { --breeze-duration: 6.8s; --breeze-delay: -2s; }
+.palm-tree:nth-of-type(3n + 2) .palm-sway { --breeze-duration: 5.7s; --breeze-delay: -4.3s; }
+.palm-tree:nth-of-type(3n) .palm-sway { --breeze-duration: 7.3s; --breeze-delay: -1.2s; }
+@keyframes palm-breeze {
+  from { transform: rotate(-.9deg) skewX(-.35deg); }
+  to { transform: rotate(1.2deg) skewX(.45deg); }
+}
 .diorama-caption {
   position: relative; z-index: 3; display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 12px 24px; margin: 0 auto; padding: 8px 6px 0;
@@ -89,5 +104,6 @@ html:is([lang="ar"], [lang="hi"]) .hero-diorama :is(h1 span, .hero-country span)
 }
 @media (prefers-reduced-motion: reduce) {
   .tifa-diorama .diorama-float { animation: none; }
+  .palm-sway { animation: none; transform: none; }
   .diorama-world { transform: none; }
 }

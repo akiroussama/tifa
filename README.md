@@ -23,7 +23,7 @@ La compilation ne copie que les quatre pages et `assets/` dans `public/`. L’AP
 
 ## Direction visuelle
 
-**D’El Jem à Agra** : un seul diorama réunit l’amphithéâtre d’El Jem, une oasis luxuriante du Sud tunisien avec palmeraie de dattiers, source turquoise et rives fleuries, et le Taj Mahal. Comme sur ABSFJ, des calques vectoriels répartis en profondeur s’inclinent doucement au mouvement du pointeur. La Tunisie précède l’Inde dans les drapeaux, le titre et la scène dans les quatre langues.
+**D’El Jem à Agra** : un seul diorama réunit l’amphithéâtre d’El Jem avec la mosquée Oqba Ibn Nafi de Kairouan en arrière-plan, une oasis du Sud tunisien avec un petit lac et des dattiers, et le Taj Mahal. Comme sur ABSFJ, des calques vectoriels répartis en profondeur s’inclinent doucement au mouvement du pointeur. Les palmiers se balancent légèrement à des rythmes décalés. La Tunisie précède l’Inde dans les drapeaux, le titre et la scène dans les quatre langues.
 
 Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur fond sombre), l’énergie colorée d’Optimist India, les jali moghols et les palais du Rajasthan (arches polylobées, treillis à étoiles à huit branches, palette indigo, safran, souci, or et ivoire).
 
@@ -32,9 +32,11 @@ Inspirations : la sobriété luxueuse de Sabyasachi (typographie serif, or sur f
 - Cartes, galerie et fiches en forme d’arches mogholes.
 - Réseaux sociaux présents mais discrets : petites icônes monochromes dans l’en-tête, le bloc contact et le pied de page, et une section « Rejoignez la communauté TIFA » en bas de page.
 
-Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. `assets/css/diorama.css` compose les cinq dessins SVG et `assets/js/diorama.js` gère leur mouvement. La scène reste lisible sans JavaScript et s’immobilise avec le bouton de pause, hors écran et quand la réduction des mouvements est demandée.
+Les ornements (`mandala.svg`, `jali-light.svg`, `jali-dark.svg`, `lotus.svg`) sont générés par `scripts/build_ornaments.py`. `assets/css/diorama.css` compose les six dessins SVG et anime les palmiers ; `assets/js/diorama.js` gère l’inclinaison et l’état des mouvements. La scène reste lisible sans JavaScript et s’immobilise avec le bouton de pause, hors écran, lorsque l’onglet est masqué et quand la réduction des mouvements est demandée.
 
-Le logo fourni `Logo_vec.png` est copié à l’identique. Les visuels d’[El Jem](https://whc.unesco.org/fr/list/38/) et du [Taj Mahal](https://whc.unesco.org/en/list/252/) sont des dessins originaux à partir de références architecturales. L’oasis est une illustration originale d’une palmeraie luxuriante du Sud tunisien, avec source turquoise et rives fleuries, demandée par l’utilisateur. Le Taj s’appuie sur la géométrie vectorielle existante de TIFA. La scène est une composition, non un relevé ou un paysage réel.
+Le logo fourni `Logo_vec.png` est copié à l’identique. Les visuels d’[El Jem](https://whc.unesco.org/fr/list/38/) et du [Taj Mahal](https://whc.unesco.org/en/list/252/) sont des dessins originaux à partir de références architecturales. L’oasis est une illustration originale d’une palmeraie du Sud tunisien avec un petit lac naturel, demandée par l’utilisateur. Le Taj s’appuie sur la géométrie vectorielle existante de TIFA. La scène est une composition, non un relevé ou un paysage réel.
+
+La [mosquée de Kairouan](https://www.patrimoinedetunisie.com.tn/en/monuments/the-great-mosque-of-kairouan/overview/) est dessinée d’après les références de l’AMVPPC et de l’UNESCO, avec son minaret carré à trois étages. Le calque est placé derrière El Jem. L’oasis utilise les groupes SVG `os-land` et `os-palm` par références locales dans la page : le terrain reste fixe tandis que chaque palmier oscille autour de son pied. Les positions dans la page et dans l’illustration autonome doivent rester identiques.
 
 ## Mettre à jour les contenus
 
