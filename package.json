@@ -1,0 +1,17 @@
+{
+  "name": "tifa-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test scripts/test-publications.mjs scripts/test-public-feed.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2",
+    "sharp": "0.35.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

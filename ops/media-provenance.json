@@ -152,5 +152,70 @@
     "source": "Logo_vec.png fourni par l’utilisateur le 2 octobre 2026",
     "role": "Logo officiel prioritaire",
     "transformations": "Aucune, copie exacte du fichier"
+  },
+  {
+    "file": "assets/images/diorama-horizon.svg",
+    "role": "Horizon et soleil, calque de fond",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA"
+  },
+  {
+    "file": "assets/images/diorama-terrain.svg",
+    "role": "Terrain en relief et bassin",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA"
+  },
+  {
+    "file": "assets/images/diorama-el-jem.svg",
+    "role": "Interprétation originale de l’amphithéâtre d’El Jem",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://whc.unesco.org/fr/list/38/"
+  },
+  {
+    "file": "assets/images/diorama-kairouan.svg",
+    "role": "Interprétation originale de la mosquée Oqba Ibn Nafi de Kairouan en arrière-plan d’El Jem",
+    "viewBox": [0, 0, 1200, 640],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://www.patrimoinedetunisie.com.tn/en/monuments/the-great-mosque-of-kairouan/overview/",
+    "additionalReference": "https://whc.unesco.org/fr/list/499/"
+  },
+  {
+    "file": "assets/images/diorama-oasis.svg",
+    "role": "Oasis du Sud tunisien, palmeraie de dattiers avec grappes de dattes et petit lac naturel",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA, composition stylisée demandée par l’utilisateur"
+  },
+  {
+    "file": "assets/images/diorama-taj.svg",
+    "role": "Interprétation originale du Taj Mahal, dérivée du dessin vectoriel TIFA",
+    "viewBox": [
+      0,
+      0,
+      1200,
+      640
+    ],
+    "source": "Dessin vectoriel original TIFA",
+    "referencePage": "https://whc.unesco.org/en/list/252/"
   }
 ]

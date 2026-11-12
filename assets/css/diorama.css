@@ -1,0 +1,109 @@
+/* One landscape: CSS depth, as on the ABSFJ home page. */
+.hero.hero-diorama {
+  --sky-x: 50%; --sky-y: 68%;
+  display: block;
+  overflow: clip;
+  min-height: 100svh;
+  padding: 0 0 clamp(24px, 4vh, 56px);
+  background: radial-gradient(ellipse at 63% 70%, #975f714f, transparent 57%),
+    radial-gradient(ellipse at 24% 79%, #bd76543b, transparent 55%),
+    linear-gradient(165deg, #120929 0%, #211339 41%, #402344 73%, #271532 100%);
+}
+html[dir="rtl"] .hero.hero-diorama { --sky-x: 50%; }
+.hero-diorama .hero-mandala { opacity: .16; }
+.hero-diorama .hero-jali { opacity: .3; }
+.hero-diorama .hero-content,
+html[dir="rtl"] .hero-diorama .hero-content {
+  width: min(100%, 1320px); max-width: none; margin-inline: auto;
+  padding: clamp(98px, 12svh, 137px) clamp(15px, 4vw, 44px) 0;
+  text-align: center;
+}
+.hero-diorama .hero-countries { justify-content: center; gap: clamp(8px, 1vw, 14px); }
+.hero-diorama .hero-country {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 12px; white-space: nowrap; border: 1px solid #ffdc9e45; border-radius: 999px;
+  background: #170f2fba; color: var(--ivory);
+}
+.hero-diorama .hero-country svg { flex: 0 0 auto; width: 26px; aspect-ratio: 3 / 2; border-radius: 2px; }
+.hero-diorama .hero-country span { font-size: 13px; line-height: 1.25; letter-spacing: .065em; unicode-bidi: isolate; }
+.hero-diorama h1 { font-size: clamp(42px, 4.55vw, 76px); line-height: 1.05; margin-top: 12px; }
+.hero-diorama h1 span { display: inline-block; padding-block-end: .1em; }
+.hero-diorama .hero-description,
+html[dir="rtl"] .hero-diorama .hero-description { margin: 7px auto 0; max-width: 695px; line-height: 1.5; }
+.hero-diorama .hero-actions { justify-content: center; margin-top: 15px; }
+.hero-diorama .hero-actions .button { min-height: 44px; padding: 10px 21px; }
+html:is([lang="ar"], [lang="hi"]) .hero-diorama h1 { font-size: clamp(37px, 4.15vw, 67px); line-height: 1.19; }
+html:is([lang="ar"], [lang="hi"]) .hero-diorama :is(h1 span, .hero-country span) { font-style: normal; letter-spacing: 0; }
+
+.tifa-diorama {
+  --scene-rx: 0deg; --scene-ry: 0deg; --scene-depth: 1;
+  position: relative; z-index: 2;
+  width: min(calc(100% - 40px), 1160px, max(830px, calc((100svh - 305px) * 1.875)));
+  margin: clamp(-39px, -3vw, -20px) auto 0;
+}
+.diorama-viewport {
+  position: relative; aspect-ratio: 1200 / 558;
+  perspective: 1150px; perspective-origin: 50% 52%;
+}
+.diorama-float, .diorama-world { position: absolute; transform-style: preserve-3d; }
+.diorama-float { inset: 0; }
+.diorama-world {
+  inset-inline: 0; inset-block-start: -8%; aspect-ratio: 1200 / 640;
+  transform: rotateX(calc(4deg + var(--scene-rx))) rotateY(calc(-4deg + var(--scene-ry)));
+  transform-origin: 50% 61%;
+}
+.scene-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; transform: translateZ(calc(var(--z) * var(--scene-depth))); }
+.scene-horizon { --z: -55px; }
+.scene-terrain { --z: -15px; }
+.scene-kairouan { --z: -3px; }
+.scene-taj { --z: 1px; }
+.scene-el-jem { --z: 27px; }
+.scene-oasis { --z: 48px; }
+.diorama-shadow { position: absolute; inset: auto 7% 1% 7%; height: 9%; border-radius: 50%; background: radial-gradient(ellipse, #0a061a9e, transparent 70%); }
+.tifa-diorama[data-motion="running"] .diorama-float { animation: diorama-hover 7s ease-in-out infinite alternate; }
+.tifa-diorama[data-motion="paused"] .diorama-float { animation: diorama-hover 7s ease-in-out infinite alternate; animation-play-state: paused; }
+.hero-diorama:has(.tifa-diorama[data-motion="paused"]) :is(.stars, h1 span) { animation-play-state: paused; }
+@keyframes diorama-hover { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+.palm-sway {
+  transform-box: view-box;
+  transform-origin: 0px 133px;
+  animation: palm-breeze var(--breeze-duration, 6s) ease-in-out var(--breeze-delay, 0s) infinite alternate;
+  animation-play-state: paused;
+}
+.tifa-diorama[data-motion="running"] .palm-sway { animation-play-state: running; }
+.palm-tree:nth-of-type(3n + 1) .palm-sway { --breeze-duration: 6.8s; --breeze-delay: -2s; }
+.palm-tree:nth-of-type(3n + 2) .palm-sway { --breeze-duration: 5.7s; --breeze-delay: -4.3s; }
+.palm-tree:nth-of-type(3n) .palm-sway { --breeze-duration: 7.3s; --breeze-delay: -1.2s; }
+@keyframes palm-breeze {
+  from { transform: rotate(-.9deg) skewX(-.35deg); }
+  to { transform: rotate(1.2deg) skewX(.45deg); }
+}
+.diorama-caption {
+  position: relative; z-index: 3; display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 12px 24px; margin: 0 auto; padding: 8px 6px 0;
+}
+.diorama-places { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; gap: 6px clamp(9px, 2vw, 25px); margin: 0; padding: 0; }
+.diorama-places li { display: inline-flex; align-items: center; gap: clamp(5px, .8vw, 10px); font-size: clamp(11px, 1.2vw, 15px); font-weight: 600; color: #f8e5c4; }
+.diorama-places li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex: 0 0 5px; }
+.diorama-caption #motion-toggle { min-height: 39px; padding: 6px 13px; color: var(--gold-light); background: #170f2eaa; border-color: #f6d89a68; }
+.diorama-caption #motion-toggle:hover:not(:disabled) { background: #45274b; }
+
+@media (max-width: 820px) {
+  .tifa-diorama { --scene-depth: .55; width: calc(100% - 22px); margin-top: -10px; }
+  .hero.hero-diorama { min-height: 0; }
+}
+@media (max-width: 600px) {
+  .hero-diorama .hero-content, html[dir="rtl"] .hero-diorama .hero-content { padding-top: 98px; }
+  .hero-diorama h1 { font-size: clamp(35px, 9.2vw, 52px); }
+  .hero-diorama h1 span { display: block; }
+  html:is([lang="ar"], [lang="hi"]) .hero-diorama h1 { font-size: clamp(31px, 8.6vw, 48px); }
+  .hero-diorama .hero-description { font-size: 14px; }
+  .tifa-diorama { width: calc(100% - 14px); margin-top: 0; }
+  .diorama-world { transform: rotateX(calc(3deg + var(--scene-rx))) rotateY(calc(-2deg + var(--scene-ry))); }
+  .diorama-caption { gap: 8px 13px; padding-top: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tifa-diorama .diorama-float { animation: none; }
+  .palm-sway { animation: none; transform: none; }
+  .diorama-world { transform: none; }
+}

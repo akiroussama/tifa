@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="same-origin">
+  <title>Publications · Bureau TIFA</title>
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/bureau-publications.css">
+  <script src="/assets/js/bureau-publications.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="bureau-header">
+    <div class="bureau-brand">
+      <img src="/assets/images/logo-tifa-officiel.png" width="56" height="56" alt="TIFA">
+      <div><strong>TIFA</strong><span>Espace du bureau</span></div>
+    </div>
+    <button id="logout-button" class="button button-quiet" type="button" hidden>Se déconnecter</button>
+  </header>
+
+  <main id="main" class="bureau-main">
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+
+    <section id="loading-view" class="loading-view" aria-live="polite">
+      <span class="loading-dot" aria-hidden="true"></span>
+      <p>Ouverture de votre espace…</p>
+    </section>
+
+    <section id="login-view" class="login-card" aria-labelledby="login-title" hidden>
+      <p class="eyebrow">Gestion des publications</p>
+      <h1 id="login-title">Bienvenue au bureau.</h1>
+      <p class="intro">Connectez-vous pour ajouter les nouvelles de l’association et mettre à jour le site.</p>
+      <p id="login-context" class="login-context" hidden></p>
+      <form id="login-form" method="post">
+        <label for="bureau-password">Mot de passe</label>
+        <input id="bureau-password" name="password" type="password" autocomplete="current-password" required aria-describedby="login-error">
+        <p id="login-error" class="field-error" role="alert" hidden></p>
+        <button id="login-button" class="button button-primary button-wide" type="submit">Se connecter</button>
+      </form>
+      <p class="quiet-copy">La connexion reste ouverte pendant 30 jours sur cet appareil. Pensez à vous déconnecter si vous le partagez.</p>
+    </section>
+
+    <section id="list-view" aria-labelledby="list-title" hidden>
+      <div class="page-heading">
+        <div><p class="eyebrow">Les nouvelles de l’association</p><h1 id="list-title">Publications</h1></div>
+        <button id="add-button" class="button button-primary" type="button"><span aria-hidden="true">＋</span> Ajouter une publication</button>
+      </div>
+      <div class="list-toolbar">
+        <div class="tabs" role="tablist" aria-label="État des publications">
+          <button id="published-tab" class="tab" type="button" role="tab" aria-selected="true" aria-controls="publication-list" data-tab="published">Publiées <span id="published-count" class="count">0</span></button>
+          <button id="archived-tab" class="tab" type="button" role="tab" aria-selected="false" aria-controls="publication-list" tabindex="-1" data-tab="archived">Retirées <span id="archived-count" class="count">0</span></button>
+        </div>
+        <p id="list-description" class="list-description">Ces publications sont visibles sur le site.</p>
+      </div>
+      <div id="list-error" class="notice notice-error" role="alert" hidden></div>
+      <div id="publication-list" class="publication-list" role="tabpanel" aria-labelledby="published-tab"></div>
+      <div id="empty-state" class="empty-state" hidden><span class="empty-mark" aria-hidden="true">✦</span><h2 id="empty-title">Votre première nouvelle</h2><p id="empty-copy">Ajoutez une publication pour raconter la vie de l’association.</p></div>
+    </section>
+
+    <section id="editor-view" aria-labelledby="editor-title" hidden>
+      <div class="editor-heading"><div><p class="eyebrow">Une nouvelle à partager</p><h1 id="editor-title">Ajouter une publication</h1></div><span id="draft-state" class="draft-state">Brouillon</span></div>
+      <p class="intro editor-intro">Un titre, votre texte et quelques photos. Vous pourrez tout relire avant de publier.</p>
+      <p class="language-note">Les nouvelles publications et les textes modifiés s’affichent en français jusqu’à leur traduction.</p>
+      <form id="publication-form" class="editor-card">
+        <div id="editor-error" class="notice notice-error" role="alert" tabindex="-1" hidden></div>
+        <fieldset id="editor-fields">
+          <legend class="sr-only">Contenu de la publication</legend>
+          <div class="field"><label for="publication-title">Titre <span class="required-label">obligatoire</span></label><input id="publication-title" name="title" type="text" minlength="3" maxlength="180" required placeholder="Ex. Une rencontre culturelle à Tunis" autocomplete="off"></div>
+          <div class="field"><label for="publication-body">Texte <span class="required-label">obligatoire</span></label><textarea id="publication-body" name="body" rows="9" minlength="10" maxlength="20000" required placeholder="Racontez ce qui s’est passé, les personnes présentes et ce que vous souhaitez partager."></textarea><p class="field-help">Séparez vos paragraphes avec un retour à la ligne.</p></div>
+          <div class="field-row">
+            <div class="field"><label for="publication-date">Date de l’événement <span class="optional-label">facultatif</span></label><input id="publication-date" name="eventDate" type="date" min="1950-01-01" max="2100-12-31" aria-describedby="existing-date-note"><p id="existing-date-note" class="field-help existing-date-note" hidden></p></div>
+            <div class="field"><label for="publication-location">Lieu <span class="optional-label">facultatif</span></label><input id="publication-location" name="location" type="text" maxlength="160" placeholder="Ex. Tunis" autocomplete="off"></div>
+          </div>
+          <div class="field category-field"><label for="publication-category">Thème</label><select id="publication-category" name="category"><option value="culture">Culture</option><option value="cooperation">Coopération</option><option value="diplomatie">Diplomatie</option><option value="association">Vie associative</option></select></div>
+          <section class="photos-section" aria-labelledby="photos-title">
+            <div class="photos-heading"><div><h2 id="photos-title">Photos <span class="optional-label">facultatif</span></h2><p class="field-help">Jusqu’à 12 photos. La première sera la couverture de votre publication.</p></div><span id="photo-count" class="photo-count">0 / 12</span></div>
+            <input id="photo-input" class="sr-only" type="file" accept="image/*" multiple tabindex="-1" aria-label="Choisir des photos">
+            <button id="choose-photos" class="button button-secondary" type="button"><span aria-hidden="true">＋</span> Ajouter des photos</button>
+            <p id="photo-status" class="field-help photo-status" role="status" aria-live="polite"></p>
+            <p id="photo-error" class="field-error" role="alert" hidden></p>
+            <ol id="photo-list" class="photo-list" aria-label="Photos dans l’ordre de publication"></ol>
+          </section>
+        </fieldset>
+        <div class="form-actions"><button id="preview-button" class="button button-primary" type="submit">Voir l’aperçu <span aria-hidden="true">→</span></button><button class="button button-quiet cancel-editor" type="button">Annuler</button></div>
+        <p class="quiet-copy">Votre brouillon n’est pas encore publié. Gardez cette page ouverte jusqu’à l’enregistrement.</p>
+      </form>
+    </section>
+
+    <section id="preview-view" aria-labelledby="preview-heading" hidden>
+      <div class="editor-heading"><div><p class="eyebrow">Dernière relecture</p><h1 id="preview-heading">Aperçu avant publication</h1></div><span class="draft-state">Pas encore enregistré</span></div>
+      <p class="intro editor-intro">Vérifiez le texte et l’ordre des photos, puis confirmez.</p>
+      <div id="preview-error" class="notice notice-error" role="alert" tabindex="-1" hidden></div>
+      <article class="preview-card"><div id="preview-cover" class="preview-cover" hidden></div><div class="preview-content"><p id="preview-category" class="eyebrow"></p><h2 id="preview-title"></h2><p id="preview-meta" class="preview-meta"></p><div id="preview-body" class="preview-body"></div><div id="preview-gallery" class="preview-gallery"></div></div></article>
+      <div class="preview-actions"><div><button id="publish-button" class="button button-primary" type="button">Publier</button><button id="back-to-edit" class="button button-secondary" type="button">Revenir au texte</button><button class="button button-quiet cancel-editor" type="button">Annuler</button></div><p id="save-status" class="save-status" role="status" aria-live="polite"></p></div>
+    </section>
+    <noscript><div class="notice notice-error">Activez JavaScript dans votre navigateur pour gérer les publications.</div></noscript>
+  </main>
+  <footer class="bureau-footer">TIFA <span aria-hidden="true">·</span> Espace réservé au bureau de l’association</footer>
+
+  <dialog id="confirm-dialog" class="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-copy">
+    <form method="dialog"><h2 id="confirm-title"></h2><p id="confirm-copy"></p><div class="dialog-actions"><button id="confirm-cancel" class="button button-secondary" type="button">Annuler</button><button id="confirm-accept" class="button button-primary" type="button">Confirmer</button></div></form>
+  </dialog>
+</body>
+</html>

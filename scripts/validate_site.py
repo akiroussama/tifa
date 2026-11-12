@@ -34,8 +34,9 @@ for path in ROOT.glob('*.html'):
     page = Page()
     page.feed(path.read_text(encoding='utf-8'))
     pages[path.name] = page
-    if page.h1 != 1:
-        errors.append(f'{path.name}: expected one h1, found {page.h1}')
+    expected_h1 = 4 if path.name == 'bureau-publications.html' else 1
+    if page.h1 != expected_h1:
+        errors.append(f'{path.name}: expected {expected_h1} h1 (one per view), found {page.h1}')
 
 for name, page in pages.items():
     for ref in page.refs:

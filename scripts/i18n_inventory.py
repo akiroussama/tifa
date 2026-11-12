@@ -19,6 +19,7 @@ DYNAMIC = (
     'Découvrir : {title}', 'Réduire la liste ↑', 'Voir toutes les rencontres ({total}) ↓',
     'Rencontres affichées : {count}', 'Rencontres affichées : {count} sur {total}',
     'Animation réduite', 'Reprendre l’animation', 'Pause de l’animation',
+    'Texte publié en français', 'Date mise à jour par le bureau de TIFA.', 'Photo {count}',
 )
 
 
