@@ -64,36 +64,13 @@ window.TIFA_CONTENT = {
       ]
     },
     {
-      "id": "assemblee-generale-2026",
-      "category": "association",
-      "categoryLabel": "Vie associative",
-      "title": "Assemblée générale : échanges et perspectives",
-      "dateLabel": "Juin 2026",
-      "date": "2026-06",
-      "datePrecision": "month",
-      "place": "Tunisie",
-      "sourceLabel": "Rapport d’activités TIFA 2024–2026",
-      "source": "constitution.html#rapport-activites",
-      "sourceType": "activity-report",
-      "sourceParagraphs": [
-        39,
-        40
-      ],
-      "summary": "L’assemblée générale consacrée à la période 2024–2025 réunit les membres autour d’échanges et de nouvelles idées de projets.",
-      "body": "Le rapport d’activités TIFA 2024–2026 mentionne, en juin 2026, une assemblée générale consacrée à la période 2024–2025. Les discussions ont porté sur de nouvelles idées de projets et la poursuite de l’amitié et de la coopération tuniso-indiennes. Le document ne donne ni décisions détaillées, ni élections, ni composition actualisée du bureau.",
-      "original": "JUNE 2026:  General Assembly 2024–2025\n\nA successful meeting marked by fruitful discussions, new project ideas, and a renewed commitment to strengthening Tunisia–India friendship and cooperation",
-      "dateNote": "Le rapport indique le mois et l’année, sans jour précis. La fiche est adaptée du rapport transmis pour ce site ; aucune photographie de cet événement n’y figure.",
-      "images": [],
-      "imageAlts": []
-    },
-    {
       "id": "yoga-carthage-2026",
       "category": "culture",
       "categoryLabel": "Culture & rencontres",
       "title": "La 12e Journée internationale du yoga à Carthage",
-      "dateLabel": "Juin 2026",
-      "date": "2026-06",
-      "datePrecision": "month",
+      "dateLabel": "21 juin 2026",
+      "date": "2026-06-21",
+      "datePrecision": "day",
       "place": "Amphithéâtre de Carthage",
       "sourceLabel": "Rapport d’activités TIFA 2024–2026",
       "source": "constitution.html#rapport-activites",
@@ -105,18 +82,53 @@ window.TIFA_CONTENT = {
       "summary": "Des membres de TIFA participent à la célébration organisée par l’ambassade de l’Inde à l’amphithéâtre de Carthage.",
       "body": "Selon le rapport d’activités TIFA 2024–2026, des membres de TIFA participent à la célébration organisée par l’ambassade de l’Inde à l’amphithéâtre de Carthage.",
       "original": "JUNE 2026:  12th International Yoga Day — Amphitheatre of Carthage\n\nCelebration of the 12th anniversary of International Yoga Day, organized by the Embassy of India in Tunisia at the Amphitheatre of Carthage, with strong participation from TIFA members.",
-      "dateNote": "Le rapport indique le mois et l’année, sans jour précis. La fiche est adaptée du rapport transmis pour ce site ; aucune photographie de cet événement n’y figure.",
+      "dateNote": "L’ambassade précise le jour et le lieu de la célébration ; le rapport d’activités de TIFA documente la participation de ses membres.",
       "images": [],
-      "imageAlts": []
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.embassyofindiatunis.gov.in/glr-20-07-2026-02.php",
+          "sourceLabel": "Ambassade de l’Inde à Tunis"
+        }
+      ]
+    },
+    {
+      "id": "assemblee-generale-2026",
+      "category": "association",
+      "categoryLabel": "Vie associative",
+      "title": "Assemblée générale : échanges et perspectives",
+      "dateLabel": "4 juin 2026",
+      "date": "2026-06-04",
+      "datePrecision": "day",
+      "place": "Hôtel Paris-Concorde Lac I, Tunis",
+      "sourceLabel": "Rapport d’activités TIFA 2024–2026",
+      "source": "constitution.html#rapport-activites",
+      "sourceType": "activity-report",
+      "sourceParagraphs": [
+        39,
+        40
+      ],
+      "summary": "Réunis à Tunis, les membres reviennent sur les activités de 2024–2025 et discutent de nouveaux projets.",
+      "body": "Selon le compte rendu de TIFA sur LinkedIn, l’assemblée générale s’est tenue le 4 juin 2026 à l’hôtel Paris-Concorde Lac I, à Tunis. Les membres ont examiné les bilans moral et financier, discuté de nouveaux projets de coopération et adopté des résolutions statutaires. Le compte rendu ne détaille pas ces résolutions et ne donne pas la composition du bureau.",
+      "original": "JUNE 2026:  General Assembly 2024–2025\n\nA successful meeting marked by fruitful discussions, new project ideas, and a renewed commitment to strengthening Tunisia–India friendship and cooperation",
+      "dateNote": "Le rapport transmis indique juin 2026 ; la date et le lieu précis figurent dans la publication de TIFA sur LinkedIn.",
+      "images": [],
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.linkedin.com/company/tunisian-indian-friendship-association/",
+          "sourceLabel": "TIFA sur LinkedIn · compte rendu de l’assemblée"
+        }
+      ]
     },
     {
       "id": "journee-culturelle-ras-jebel-2026",
       "category": "culture",
       "categoryLabel": "Culture & rencontres",
       "title": "Une journée culturelle à Ras Jebel",
-      "dateLabel": "Avril 2026",
-      "date": "2026-04",
-      "datePrecision": "month",
+      "dateLabel": "12 avril 2026",
+      "date": "2026-04-12",
+      "datePrecision": "day",
       "place": "Dar El Lamma, Ras Jebel",
       "sourceLabel": "Rapport d’activités TIFA 2024–2026",
       "source": "constitution.html#rapport-activites",
@@ -126,34 +138,45 @@ window.TIFA_CONTENT = {
         38
       ],
       "summary": "Une journée de partage culturel est organisée à Dar El Lamma, à Ras Jebel, en collaboration avec Rahi Travels Tunisia.",
-      "body": "Selon le rapport d’activités TIFA 2024–2026, une journée de partage culturel est organisée à Dar El Lamma, à Ras Jebel, en collaboration avec Rahi Travels Tunisia.",
+      "body": "TIFA a réuni des participants à Dar El Lamma, à Ras Jebel, avec Rahi Travels Tunisia. La publication de l’association précise le programme de la journée : yoga en plein air, dégustation de spécialités indiennes et échanges sur le tourisme et la culture.",
       "original": "APRIL 2026:   Cultural Relaxation Day\n\nA convivial day of cultural sharing organized in collaboration with Rahi Travels Tunisia, in the Dar El Lamma Ras Jebel.",
-      "dateNote": "Le rapport indique le mois et l’année, sans jour précis. La fiche est adaptée du rapport transmis pour ce site ; aucune photographie de cet événement n’y figure.",
+      "dateNote": "Le rapport transmis indique avril 2026 ; la date du 12 avril figure dans la publication de TIFA sur LinkedIn.",
       "images": [],
-      "imageAlts": []
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.linkedin.com/company/tunisian-indian-friendship-association/",
+          "sourceLabel": "TIFA sur LinkedIn · journée à Ras Jebel"
+        }
+      ]
     },
     {
       "id": "diwali-2025",
       "category": "culture",
       "categoryLabel": "Culture & rencontres",
       "title": "Diwali, une rencontre de lumière et de cultures",
-      "dateLabel": "Novembre 2025",
-      "date": "2025-11",
-      "place": "Tunisie",
+      "dateLabel": "15 novembre 2025",
+      "date": "2025-11-15",
+      "place": "Golden Tulip Carthage, Gammarth",
       "sourceLabel": "Ambassade de l’Inde à Tunis",
       "source": "https://www.embassyofindiatunis.gov.in/glr-22-11-2025-06.php",
       "summary": "La célébration de Diwali et d’India Day réunit les communautés tunisienne et indienne autour d’un programme culturel.",
-      "body": "L’ambassade rapporte une célébration d’India Day et de Diwali en présence de Jamel Boujdaria, président de TIFA. L’allumage de la lampe, des représentations artistiques et des présentations de vêtements tunisiens et indiens ont accompagné cette rencontre. Le rapport d’activités TIFA 2024–2026 précise que la célébration a été coorganisée avec l’ambassade et mentionne des représentations culturelles, de la méditation et de la cuisine indienne.",
+      "body": "Selon TIFA, la célébration du 15 novembre 2025 au Golden Tulip Carthage, à Gammarth, a aussi marqué le premier anniversaire de l’association. Coorganisée avec l’ambassade de l’Inde, la soirée a mêlé allumage de la lampe, méditation, représentations artistiques, mode tunisienne et indienne et découverte de la cuisine indienne.",
       "original": null,
-      "dateNote": "Mois issu de la galerie datée de novembre 2025. Le jour exact de l’événement n’est pas établi par cette page.",
+      "dateNote": "La publication de TIFA sur LinkedIn donne le jour et le lieu, et la rétrospective de l’assemblée confirme la date. La galerie de l’ambassade documente la célébration sans indiquer son jour.",
       "images": [],
       "imageAlts": [],
       "additionalSources": [
         {
           "source": "constitution.html#rapport-activites",
           "sourceLabel": "Rapport d’activités TIFA 2024–2026"
+        },
+        {
+          "source": "https://www.linkedin.com/company/tunisian-indian-friendship-association/",
+          "sourceLabel": "TIFA sur LinkedIn · publication Diwali"
         }
-      ]
+      ],
+      "datePrecision": "day"
     },
     {
       "id": "accord-chambre-commerce-2025",
@@ -229,10 +252,10 @@ window.TIFA_CONTENT = {
       "category": "cooperation",
       "categoryLabel": "Formation & coopération",
       "title": "ITEC : 61 ans de coopération technique",
-      "dateLabel": "Septembre 2025",
-      "date": "2025-09",
-      "datePrecision": "month",
-      "place": "Tunisie",
+      "dateLabel": "15 septembre 2025",
+      "date": "2025-09-15",
+      "datePrecision": "day",
+      "place": "Hôtel Mövenpick, Gammarth",
       "sourceLabel": "Rapport d’activités TIFA 2024–2026",
       "source": "constitution.html#rapport-activites",
       "sourceType": "activity-report",
@@ -240,12 +263,18 @@ window.TIFA_CONTENT = {
         27,
         28
       ],
-      "summary": "TIFA prend part à la célébration du 61e anniversaire du programme ITEC, consacré au développement des compétences et à la coopération technique.",
-      "body": "Selon le rapport d’activités TIFA 2024–2026, TIFA prend part à la célébration du 61e anniversaire du programme ITEC, consacré au développement des compétences et à la coopération technique.",
+      "summary": "TIFA prend part à la 61e Journée ITEC, consacrée à la formation et à la coopération technique.",
+      "body": "L’ambassade de l’Inde a célébré la 61e Journée du programme indien de coopération technique et économique (ITEC) le 15 septembre 2025 à l’hôtel Mövenpick de Gammarth. Le rapport d’activités mentionne la participation de TIFA à cette rencontre sur la formation et le partage d’expérience.",
       "original": "SEPTEMBER 2025:  61st Anniversary of ITEC Day.\n\nParticipation of TIFA in the celebration of the 61st anniversary of the ITEC (Indian Technical and Economic Cooperation) programme, underlining its role in capacity-building and technical cooperation.",
-      "dateNote": "Le rapport indique le mois et l’année, sans jour précis. La fiche est adaptée du rapport transmis pour ce site ; aucune photographie de cet événement n’y figure.",
+      "dateNote": "Le communiqué de l’ambassade donne la date et le lieu ; le rapport d’activités documente la participation de TIFA.",
       "images": [],
-      "imageAlts": []
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.embassyofindiatunis.gov.in/pdf/Press%20Release-%2061st%20ITEC%20DAY%202025%20%28French%29.pdf",
+          "sourceLabel": "Ambassade de l’Inde à Tunis · communiqué ITEC"
+        }
+      ]
     },
     {
       "id": "troupe-rajasthan-2025",
@@ -264,21 +293,27 @@ window.TIFA_CONTENT = {
         26
       ],
       "summary": "TIFA participe à une réception en l’honneur d’une troupe indienne de chants et de danses populaires du Rajasthan en visite en Tunisie.",
-      "body": "Selon le rapport d’activités TIFA 2024–2026, TIFA participe à une réception en l’honneur d’une troupe indienne de chants et de danses populaires du Rajasthan en visite en Tunisie.",
+      "body": "Selon le rapport d’activités, TIFA participe à une réception en l’honneur d’une troupe de chants et de danses populaires du Rajasthan. L’ambassade confirme la réception et indique que la troupe, en tournée en Tunisie du 9 au 18 août, s’est produite au Festival international de Carthage et dans d’autres festivals régionaux.",
       "original": "AUG 2025: Hi-Tea Reception — Rajasthani Folk Troupe.\n\nTIFA, took part in the Hi-Tea reception held in honour of the Indian Rajasthani folk songs and dance troupe visiting Tunisia.",
-      "dateNote": "Le rapport indique le mois et l’année, sans jour précis. La fiche est adaptée du rapport transmis pour ce site ; aucune photographie de cet événement n’y figure.",
+      "dateNote": "Le rapport indique août 2025. L’ambassade précise les dates de la tournée, sans dater le jour de la réception.",
       "images": [],
-      "imageAlts": []
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.embassyofindiatunis.gov.in/glr-29-08-2025-03.php",
+          "sourceLabel": "Ambassade de l’Inde à Tunis"
+        }
+      ]
     },
     {
       "id": "yoga-carthage-2025",
       "category": "culture",
       "categoryLabel": "Culture & rencontres",
       "title": "Le yoga, un moment de partage à Carthage",
-      "dateLabel": "Juin 2025",
-      "date": "2025-06",
-      "datePrecision": "month",
-      "place": "Musée de Carthage",
+      "dateLabel": "21 juin 2025",
+      "date": "2025-06-21",
+      "datePrecision": "day",
+      "place": "Esplanade du Musée de Carthage",
       "sourceLabel": "Rapport d’activités TIFA 2024–2026",
       "source": "constitution.html#rapport-activites",
       "sourceType": "activity-report",
@@ -286,12 +321,18 @@ window.TIFA_CONTENT = {
         23,
         24
       ],
-      "summary": "Le rapport d’activités retrace une célébration de la Journée internationale du yoga au Musée de Carthage, autour du partage et du bien-être.",
-      "body": "Le rapport d’activités TIFA 2024–2026 retrace une célébration de la Journée internationale du yoga au Musée de Carthage, autour des valeurs d’unité et de bien-être. Il ne précise pas le rôle de TIFA dans l’organisation de cette rencontre.",
+      "summary": "L’ambassade de l’Inde et ses partenaires célèbrent la Journée internationale du yoga sur l’esplanade du Musée de Carthage.",
+      "body": "Le 21 juin 2025, l’ambassade de l’Inde et ses partenaires institutionnels ont célébré la Journée internationale du yoga sur l’esplanade du Musée de Carthage. La séance de yoga et de méditation était animée par l’ambassadrice Dr Devyani Uttam Khobragade et Nihel Bechini. Le rôle de TIFA dans cette rencontre n’est pas précisé par les sources.",
       "original": "JUNE 2025:  International Yoga Day — Esplanade de Carthage.\n\nCelebration of International Yoga Day at the Carthage Museum, in the presence of His Excellency the Ambassador of India, around the values of unity and wellness.",
-      "dateNote": "Le rapport indique le mois et l’année, sans jour précis. La fiche est adaptée du rapport transmis pour ce site ; aucune photographie de cet événement n’y figure.",
+      "dateNote": "L’ambassade précise le jour, le lieu et l’organisation. Le rapport d’activités de TIFA mentionne la rencontre sans préciser le rôle de l’association.",
       "images": [],
-      "imageAlts": []
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.embassyofindiatunis.gov.in/glr-26-06-2025-02.php",
+          "sourceLabel": "Ambassade de l’Inde à Tunis"
+        }
+      ]
     },
     {
       "id": "diner-ambassadrice-2025",
@@ -306,9 +347,19 @@ window.TIFA_CONTENT = {
       "summary": "TIFA organise un dîner en l’honneur de l’ambassadrice Dr Devyani Uttam Khobragade, consacré aux liens entre les deux pays.",
       "body": "Le 16 mai 2025, TIFA a accueilli un dîner en l’honneur de l’ambassadrice Dr Devyani Uttam Khobragade. Selon le compte rendu de l’ambassade, les échanges ont porté sur les liens entre la Tunisie et l’Inde et les perspectives de coopération.",
       "original": null,
-      "dateNote": "Date de l’événement explicitement indiquée par l’ambassade.",
+      "dateNote": "L’ambassade indique le 16 mai 2025, date retenue ici. Le compte rendu LinkedIn de TIFA indique le 17 mai et le rapport transmis situe le dîner en juin. L’écart reste à clarifier avec l’association.",
       "images": [],
-      "imageAlts": []
+      "imageAlts": [],
+      "additionalSources": [
+        {
+          "source": "https://www.linkedin.com/company/tunisian-indian-friendship-association/",
+          "sourceLabel": "TIFA sur LinkedIn · compte rendu de l’assemblée"
+        },
+        {
+          "source": "constitution.html#rapport-activites",
+          "sourceLabel": "Rapport d’activités TIFA 2024–2026"
+        }
+      ]
     },
     {
       "id": "indian-tea-day-2025",
