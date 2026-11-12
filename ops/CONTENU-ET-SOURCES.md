@@ -98,3 +98,25 @@ Deux événements déjà présents sont identifiés dans le rapport :
 Le rapport utilise Sultana et Soltana pour Shabinaa selon les entrées ; la fiche CIFE évite cette variation en ne reprenant pas le nom. Les qualités citées sont historiques et attribuées au rapport, sans affirmation sur les fonctions actuelles.
 
 L’accueil met en avant le protocole de coopération et enrichit l’histoire. Les rencontres sont rangées par dates décroissantes ; les quatre dernières s’affichent initialement, un bouton ouvre les seize fiches et le filtre Vie associative donne accès à l’assemblée générale. Les neuf photographies réelles, le logo officiel, les cinq fondateurs et le Taj Mahal sont conservés.
+
+## Liens, logo et recoupement documentaire — 12 novembre 2026
+
+- Les liens Facebook et Instagram du site correspondent aux comptes transmis : [Facebook](https://www.facebook.com/profile.php?id=61570485117575), [Instagram](https://www.instagram.com/tifa.tunisiaindia/) sans paramètre de suivi. La consultation automatisée n’a pas pu reconfirmer leur accessibilité ce jour ; cela ne démontre ni la fermeture ni la privatisation des comptes.
+- La [page LinkedIn publique de TIFA](https://www.linkedin.com/company/tunisian-indian-friendship-association/) a été lue. La version actuelle du site pointe déjà vers cette page principale ; l’ancien lien vers le fil de publications n’était pas lisible lors du contrôle automatisé.
+- Le PNG officiel dans le dépôt correspond exactement à `Logo_vec.png` (SHA-256 `026d0793261af2622410e9769ebca60fc51b7f3ccad72f18ce5175a5586d13bc`). Il est utilisé dans l’en-tête, les icônes d’onglet et les métadonnées de partage.
+- Le QR code évoqué dans l’échange n’était pas joint et aucun fichier clairement identifié comme tel n’a été trouvé. Sa destination reste indéterminée. Vérifier l’image originale avant réemploi ; pour un nouveau QR de partage du site, utiliser l’adresse HTTPS définitive et vérifier la lecture du code.
+
+Sources complémentaires qui affinent les fiches existantes :
+
+| Fiche | Précision vérifiée | Source |
+| --- | --- | --- |
+| Yoga 2025 | 21 juin 2025, esplanade du Musée de Carthage. L’ambassade et ses partenaires ont organisé la rencontre ; rôle TIFA non précisé. | [Ambassade](https://www.embassyofindiatunis.gov.in/glr-26-06-2025-02.php) |
+| ITEC | 15 septembre 2025, hôtel Mövenpick à Gammarth. La participation de TIFA vient du rapport. | [Communiqué de l’ambassade](https://www.embassyofindiatunis.gov.in/pdf/Press%20Release-%2061st%20ITEC%20DAY%202025%20%28French%29.pdf) |
+| Diwali | 15 novembre 2025 au Golden Tulip Carthage, à Gammarth ; TIFA indique que la soirée a marqué son premier anniversaire. | [LinkedIn TIFA](https://www.linkedin.com/company/tunisian-indian-friendship-association/) : publication Diwali et compte rendu de l’assemblée générale |
+| Ras Jebel | 12 avril 2026 ; yoga, cuisine indienne et échanges. Le rapport indique Dar El Lamma et Rahi Travels Tunisia ; la publication écrit Dar Ellama et emploie un autre libellé pour le partenaire. | [LinkedIn TIFA](https://www.linkedin.com/company/tunisian-indian-friendship-association/) : publication sur la journée à Ras Jebel, et rapport |
+| Assemblée générale | 4 juin 2026 à l’hôtel Paris-Concorde Lac I, à Tunis ; examen des bilans et résolutions adoptées selon TIFA. La composition du bureau n’est pas donnée. | [LinkedIn TIFA](https://www.linkedin.com/company/tunisian-indian-friendship-association/) : compte rendu de l’assemblée générale |
+| Yoga 2026 | 21 juin 2026, amphithéâtre de Carthage. La participation des membres de TIFA vient du rapport. | [Ambassade](https://www.embassyofindiatunis.gov.in/glr-20-07-2026-02.php) |
+
+- La [galerie de l’ambassade](https://www.embassyofindiatunis.gov.in/glr-29-08-2025-03.php) confirme la réception de la troupe du Rajasthan. Les 9–18 août sont les dates de la tournée ; le jour de la réception n’est pas précisé.
+- Le [compte rendu de l’ambassade](https://www.embassyofindiatunis.gov.in/glr-22-05-2025.php) donne le 16 mai 2025 pour le dîner. La rétrospective LinkedIn de TIFA indique le 17 mai à Dar Essalem, et le rapport mentionne juin au même lieu. Une seule fiche est maintenue, avec le 16 mai attribué à l’ambassade et les écarts documentés dans la fiche et la page des sources.
+- Les publications LinkedIn identifiées sont lisibles sur la page de l’association, mais leurs permaliens individuels n’ont pas été établis. Le débat sur l’image de la Tunisie n’est pas compté comme une autre rencontre : les éléments consultés le rattachent à l’assemblée générale. Aucun nouveau média ni nouveau membre du bureau n’a été ajouté.
