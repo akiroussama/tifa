@@ -2,7 +2,7 @@ window.TIFA_MESSAGES ??= {};
 window.TIFA_MESSAGES.en = {
   text: {
     "Les photographies des rencontres proviennent de deux publications de la page Facebook TIFA. Les fiches conservent leurs liens vers la source. Les activités de 2024 à 2026 sont également adaptées du rapport d’activités transmis par TIFA. Les": "The event photographs come from two posts on TIFA’s Facebook page. Event listings link back to their sources. Activities from 2024 to 2026 also draw on the activity report supplied by TIFA. The",
-    "Diorama en relief de l’amphithéâtre d’El Jem, d’une oasis du Sud tunisien avec des palmiers dattiers et un jeune dromadaire, et du Taj Mahal, de la Tunisie vers l’Inde.": "Relief diorama of the Amphitheatre of El Jem, a southern Tunisian oasis with date palms and a young dromedary, and the Taj Mahal, from Tunisia to India.",
+    "Diorama en relief de l’amphithéâtre d’El Jem, d’une oasis luxuriante du Sud tunisien avec une palmeraie de dattiers, une source turquoise et des rives fleuries, et du Taj Mahal, de la Tunisie vers l’Inde.": "Relief diorama of the Amphitheatre of El Jem, a lush southern Tunisian oasis with a date palm grove, a turquoise spring and flowering banks, and the Taj Mahal, from Tunisia to India.",
     "Oasis du Sud tunisien": "Southern Tunisian oasis",
     "Texte publié en français": "Published in French",
     "Date mise à jour par le bureau de TIFA.": "Date updated by the TIFA committee.",
